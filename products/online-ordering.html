@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta content="オウンドアプリ、" name="keywords" />
+    <title>事前注文アプリをすばやく作成！ | Applova</title>
+
+    <link
+      href="https://applovajp.com/products/online-ordering"
+      rel="canonical"
+    />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta content="事前注文アプリをすばやく作成！ | Applova" property="title" />
+    <meta
+      content="Applovaは、手頃な価格のオウンドモバイル注文アプリ構築で知られています！ 表現力豊かにカスタマイズ可能なAndroid＆iOSモバイルアプリを入手してください。"
+      property="description"
+    />
+    <meta
+      content="https://applovajp.com/products/online-ordering"
+      property="og:url"
+    />
+    <meta property="og:site_name" content="Applova" />
+    <meta
+      content="Applovaは、手頃な価格のオウンドモバイル注文アプリ構築で知られています！ 表現力豊かにカスタマイズ可能なAndroid＆iOSモバイルアプリを入手してください。"
+      name="description"
+    />
+    <meta content="事前注文アプリをすばやく作成！ | Applova" name="title" />
+
+    <!-- Page hiding snippet (recommended)  -->
+    <style>
+      .async-hide {
+        opacity: 0 !important;
+      }
+    </style>
+    <!-- <script>
+      (function (a, s, y, n, c, h, i, d, e) {
+        s.className += " " + y;
+        h.start = 1 * new Date();
+        h.end = i = function () {
+          s.className = s.className.replace(RegExp(" ?" + y), "");
+        };
+        (a[n] = a[n] || []).hide = h;
+        setTimeout(function () {
+          i();
+          h.end = null;
+        }, c);
+        h.timeout = c;
+      })(window, document.documentElement, "async-hide", "dataLayer", 4000, {
+        "GTM-TWXGC9C": true,
+      });
+    </script> -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-121888509-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-121888509-1", {
+        optimize_id: "GTM-TWXGC9C",
+      });
+    </script> -->
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          "gtm.start": new Date().getTime(),
+          event: "gtm.js",
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-TM3J9FF");
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- For Facebook -->
+    <meta
+      content="事前注文アプリをすばやく作成！ | Applova"
+      property="og:title"
+    />
+    <meta
+      content="https://applovajp.com/images/products/mobile-store/mobile-store-back.jpg"
+      property="og:image"
+    />
+    <meta
+      content="Applovaは、手頃な価格のオウンドモバイル注文アプリ構築で知られています！ 表現力豊かにカスタマイズ可能なAndroid＆iOSモバイルアプリを入手してください。"
+      name="og:description"
+    />
+
+    <!-- For Google -->
+    <meta name="keywords" content="" />
+
+    <meta name="author" content="admin" />
+    <meta name="copyright" content="Applova.io" />
+    <meta name="application-name" content="Applova" />
+
+    <!-- For Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      content="事前注文アプリをすばやく作成！ | Applova"
+      name="twitter:title"
+    />
+    <meta
+      content="Applovaは、手頃な価格のオウンドモバイル注文アプリ構築で知られています！ 表現力豊かにカスタマイズ可能なAndroid＆iOSモバイルアプリを入手してください。"
+      name="twitter:description"
+    />
+    <meta
+      content="https://applovajp.com/images/products/mobile-store/mobile-store-back.jpg"
+      name="twitter:image"
+    />
+    <meta name="twitter:label1" value="Reading time" />
+    <meta name="twitter:data1" value="5 minutes" />
+
+    <link rel="icon" href="../images/applova-logo-black-fav.png" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/bootstrap-3.3.7-dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/gotham-font.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/new-common-20200409.min.css"
+    />
+    <!-- <script>
+      (function (i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "https://www.google-analytics.com/analytics.js",
+        "ga"
+      );
+
+      ga("create", "UA-102108864-1", "auto");
+      ga("send", "pageview");
+    </script> -->
+
+    <!-- Facebook Pixels Code -->
+    <!-- <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "1237984449552745", {
+        em: "support@applova.io",
+      });
+      fbq("track", "PageView");
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        alt="Facebook Pixel Code"
+        title="Facebook Pixel Code"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=1237984449552745&ev=PageView&noscript=1"
+    /></noscript> -->
+    <!-- <script type="text/javascript" src="../js/top-js-20190822.js"></script> -->
+  </head>
+
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-TM3J9FF"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      >
+      </iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- For Zoho SalesIQ -->
+    <script type="text/javascript">
+      var $zoho = $zoho || {};
+      $zoho.salesiq = $zoho.salesiq || {
+        widgetcode:
+          "beaba25195d86f0f3d9ee0c020a01c11fc4c5b0c05b4c227bd9524ce4e9d7e5e",
+        values: {},
+        ready: function () {},
+      };
+      var d = document;
+      s = d.createElement("script");
+      s.type = "text/javascript";
+      s.id = "zsiqscript";
+      s.defer = true;
+      s.src = "https://salesiq.zoho.com/widget";
+      t = d.getElementsByTagName("script")[0];
+      t.parentNode.insertBefore(s, t);
+      d.write("<div id='zsiqwidget'></div>");
+    </script>
+    <header applova-include-html="../common-files/child-page-header.html">
+      <!--Header content goes here-->
+    </header>
+
+    <div class="wrapper">
+      <div class="banner-section banner-section__products-online-ordering">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+              <div class="row">
+                <div class="col-sm-6">
+                  <h2 class="lite-font">自社専用の</h2>
+                  <h1 class="bold-font main-theme-color">
+                    テイクアウトWEBサービス<br />をつくろう。
+                  </h1>
+                  <a
+                    class="btn line-btn circle-btn bold-font uppercase mt-4"
+                    href="../request-demo.html"
+                    id="online-ordering-main-banner-get-demo-btn"
+                    >無料お試し</a
+                  >
+                </div>
+                <div class="col-sm-5 banner-section__main-image">
+                  <img
+                    src="../images/products/online-ordering/banner-image.png"
+                    alt="Applova Apps"
+                    title="Applova Apps"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-section page-section__overlapping">
+        <div class="text-center">
+          <h2>applova活用で期待できる効果</h2>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+              <div class="row mt-5 text-center">
+                <div class="col-sm-4">
+                  <img
+                    data-src="../images/products/mobile-store/double-order-icon.png"
+                    class="lazy"
+                  />
+                  <h4 class="bold-font">席数に縛られない営業</h4>
+                  <p class="mt-4">
+                    テイクアウト注文を御社のお客様のスマホやタブレット、PCから受け付けることが可能です。これにより、飲食ビジネスのデジタルシフトを後押しします！
+                  </p>
+                </div>
+                <div class="col-sm-4">
+                  <img
+                    data-src="../images/products/mobile-store/staff-icon.png"
+                    class="lazy"
+                  />
+                  <h4 class="bold-font">オペレーションの簡素化</h4>
+                  <p class="mt-4">
+                    注文データは、御社の顧客から厨房に届くため、手動から自動オペレーションに変化させることが可能です。
+                  </p>
+                </div>
+                <div class="col-sm-4">
+                  <img
+                    data-src="../images/products/mobile-store/more-customers-icon.png"
+                    class="lazy"
+                  />
+                  <h4 class="bold-font">新しい顧客体験</h4>
+                  <p class="mt-4">
+                    御社のお客様の利便性をアップします。
+                    スマホで商品をじっくり眺め比較してから注文できたり、いつでもどこでもスマホから注文できるようになります。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page-section page-section__mobile-text-center pb-0">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+              <div class="row">
+                <div class="col-md-5">
+                  <div class="page-section__heading-background">
+                    <div class="page-section__heading-background-square"></div>
+                    <h2 class="bold-font">
+                      スマホでもパソコンからでも注文獲得が可能に。
+                    </h2>
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <div class="row">
+                    <div class="col-md-12 col-sm-4 mb-4">
+                      <div class="row">
+                        <div class="col-md-2">
+                          <img
+                            data-src="../images/products/mobile-store/commission-free-small-icon.png"
+                            class="lazy"
+                          />
+                        </div>
+                        <div class="col-md-10">
+                          <h4 class="bold-font">手数料は０円！</h4>
+                          <p>
+                            applovaを使うことで、今まで手数料を約10％近く支払うプラットホーム型と異なり、いつまでもオウンド型のWEBサイトを手数料0円で利用できます。
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12 col-sm-4 mb-4">
+                      <div class="row">
+                        <div class="col-md-2">
+                          <img
+                            data-src="../images/products/mobile-store/remote-customer-small-icon.png"
+                            class="lazy"
+                          />
+                        </div>
+                        <div class="col-md-10">
+                          <h4 class="bold-font">顧客離れ防止</h4>
+                          <p>
+                            オンラインビジネスにシフトすることで、いつでもどこでも、直接的にお客様の再来店を促すことが可能です。
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12 col-sm-4 mb-4">
+                      <div class="row">
+                        <div class="col-md-2">
+                          <img
+                            data-src="../images/products/mobile-store/ordering-small-icon.png"
+                            class="lazy"
+                          />
+                        </div>
+                        <div class="col-md-10">
+                          <h4 class="bold-font">スムーズな注文受け付け</h4>
+                          <p>
+                            店舗外にいるお客様と御社の厨房がオンラインで繋がります。
+                            時間予約設定やオプションの有無など細かなお客様への対応も可能です。
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="page-section__dark-hr">
+                <hr />
+              </div>
+              <div class="row">
+                <div class="col-md-5">
+                  <div class="page-section__heading-background">
+                    <div class="page-section__heading-background-square"></div>
+                    <h2 class="bold-font">
+                      飲食店経営に<br />もデジタルシフトを。
+                    </h2>
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <div class="row">
+                    <div class="col-md-12 col-sm-4">
+                      <div class="row">
+                        <div class="col-md-2">
+                          <img
+                            data-src="../images/products/mobile-store/delight-customers-small-icon.png"
+                            class="lazy"
+                          />
+                        </div>
+                        <div class="col-md-10">
+                          <h4 class="bold-font">注文プロセスの最適化</h4>
+                          <p>
+                            お客様のスマホと厨房ディスプレイ、POSデータを連携を行うことが可能です。
+                            これにより人力で行っていた接客業務を効率化し、人間はよりホスピタリティ溢れる業務に集中することが出来ます。
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12 col-sm-4 mb-4">
+                      <div class="row">
+                        <div class="col-md-2">
+                          <img
+                            data-src="../images/products/mobile-store/sales-channel-small-icon.png"
+                            class="lazy"
+                          />
+                        </div>
+                        <div class="col-md-10">
+                          <h4 class="bold-font">自社販売サイトをメインに</h4>
+                          <p>
+                            忙し貧乏にならないためには、自社サイト経由の注文比率を高めることも有効です。
+                            自社サイトを成長させてオンラインビジネスを拡大させましょう。
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12 col-sm-4 mb-4">
+                      <div class="row">
+                        <div class="col-md-2">
+                          <img
+                            data-src="../images/products/mobile-store/less-time-small-icon.png"
+                            class="lazy"
+                          />
+                        </div>
+                        <div class="col-md-10">
+                          <h4 class="bold-font">時間とお金の節約を</h4>
+                          <p>
+                            applovaにすれば電話注文対応時に目の前のお客様をお待たせしてしまう時間や、注文の聞き間違えをするリスクなどを防げます。
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="page-section__dark-hr">
+                <hr />
+              </div>
+              <div class="row">
+                <div class="col-md-5">
+                  <div class="page-section__heading-background">
+                    <div class="page-section__heading-background-square"></div>
+                    <h2 class="bold-font">
+                      シンプルでスマートな<br />注文体験
+                    </h2>
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <div class="row">
+                    <div class="col-md-12 col-sm-4">
+                      <div class="row">
+                        <div class="col-md-2">
+                          <img
+                            data-src="../images/products/mobile-store/clear-illustration-small-icon.png"
+                            class="lazy"
+                          />
+                        </div>
+                        <div class="col-md-10">
+                          <h4 class="bold-font">使いやすい注文システム</h4>
+                          <p>
+                            メニュー一覧から商品の魅力を写真や説明を読んでからの注文が可能です。
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12 col-sm-4 mb-4">
+                      <div class="row">
+                        <div class="col-md-2">
+                          <img
+                            data-src="../images/products/mobile-store/digital-stamp-card-small-icon.png"
+                            class="lazy"
+                          />
+                        </div>
+                        <div class="col-md-10">
+                          <h4 class="bold-font">
+                            スタンプカードや、クーポンで再注文促進
+                          </h4>
+                          <p>
+                            既存顧客の再注文を促進するため、インセンティブを発行することも可能です。
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12 col-sm-4 mb-4">
+                      <div class="row">
+                        <div class="col-md-2">
+                          <img
+                            data-src="../images/products/mobile-store/self-checkout-small-icon.png"
+                            class="lazy"
+                          />
+                        </div>
+                        <div class="col-md-10">
+                          <h4 class="bold-font">
+                            安全で簡単な事前支払い（coming soon）
+                          </h4>
+                          <p>
+                            applovaは大手決済プロバイダーとパートナーシップを結んでおり、シームレスかつ安全な自己支払いオンラインオプションを提供しています。顧客はデビットカードまたはクレジットカードにて少ないクリック数で簡単に支払いを行うことが出来ます。
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-section">
+        <div class="container">
+          <div class="row d-flex">
+            <div class="col-md-10 col-md-offset-1">
+              <div class="row d-flex justify-content-center flex-flow-row-wrap">
+                <div class="col-md-8 text-center mb-5">
+                  <h2 class="bold-font">
+                    <span class="main-theme-color">applovaで利用できる </span
+                    >その他サービス
+                  </h2>
+                </div>
+                <div class="col-md-10">
+                  <div class="row text-center">
+                    <!--                                    <a href="../kiosk/" class="col-sm-6 clickable-card">-->
+                    <div class="col-sm-6">
+                      <img
+                        data-src="../images/webinar/applova-self-ordering-card-back.png"
+                        alt=""
+                        class="lazy w-100"
+                      />
+                      <h4 class="bold-font">自動注文端末（coming soon）</h4>
+                      <!-- <div>
+                                            <p class="link" href="../kiosk/">もっと読む <i class="fa fa-angle-right"></i></p>
+                                        </div> -->
+                    </div>
+                    <!--                                    </a>-->
+
+                    <a
+                      href="../products/mobile-order-ahead/"
+                      class="col-sm-6 clickable-card"
+                    >
+                      <img
+                        data-src="../images/webinar/applova-mobile-ahead-card-back.png"
+                        alt=""
+                        class="lazy w-100"
+                      />
+                      <h4 class="bold-font">専用注文アプリ（iOS/Android）</h4>
+                      <div>
+                        <p class="link" href="/products/mobile-order-ahead/">
+                          もっと読む <i class="fa fa-angle-right"></i>
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-section gray-bg">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+              <div class="row">
+                <div class="col-md-5 col-sm-4">
+                  <h2 class="bold-font">まずは、専門チームに無料相談を！</h2>
+                  <h2 class="lite-font">
+                    御社のご状況を伺いながら最適なソリューションをご提案致します。
+                  </h2>
+                </div>
+                <div class="col-md-7 col-sm-8">
+                  <div class="page-section__card mt-4">
+                    <form
+                      action="https://forms.zohopublic.com/Applova/form/RequestDemo/formperma/wcqQWj8_zbhOdW3_5vmDlwi3l8zTksr_xjZnyv5E1-k/htmlRecords/submit"
+                      name="form"
+                      id="form"
+                      method="POST"
+                      accept-charset="UTF-8"
+                      enctype="multipart/form-data"
+                    >
+                      <input
+                        type="hidden"
+                        name="zf_referrer_name"
+                        value=""
+                      /><!-- To Track referrals , place the referrer name within the " " in the above hidden input field -->
+                      <input
+                        type="hidden"
+                        name="zf_redirect_url"
+                        value=""
+                      /><!-- To redirect to a specific page after record submission , place the respective url within the " " in the above hidden input field -->
+                      <input
+                        type="hidden"
+                        name="zc_gad"
+                        value=""
+                      /><!-- If GCLID is enabled in Zoho CRM Integration, click details of AdWords Ads will be pushed to Zoho CRM -->
+                      <div class="row home-page__get-demo-section-1">
+                        <div class="col-sm-8">
+                          <input
+                            id="business-name-input"
+                            class="form-control"
+                            placeholder="御社の事業名を教えて下さい"
+                            type="text"
+                            name="SingleLine1"
+                            value=""
+                            fieldType="1"
+                            maxlength="255"
+                          />
+                        </div>
+                        <div class="col-sm-4">
+                          <a
+                            class="btn primary-btn full-width uppercase bold-font"
+                            onclick="getDemoHomeSectionClick()"
+                            >無料相談</a
+                          >
+                        </div>
+                      </div>
+                      <div class="row home-page__get-demo-section-2 hide">
+                        <div class="col-md-12">
+                          <input
+                            class="form-control"
+                            type="text"
+                            placeholder="名前"
+                            type="text"
+                            name="SingleLine"
+                            value=""
+                            fieldType="1"
+                            maxlength="255"
+                          />
+                        </div>
+                        <div class="col-md-6 mt-4">
+                          <input
+                            class="form-control"
+                            placeholder="Email"
+                            type="text"
+                            maxlength="255"
+                            name="Email"
+                            value=""
+                            fieldType="9"
+                          />
+                        </div>
+                        <div class="col-md-6 mt-4">
+                          <input
+                            class="form-control"
+                            placeholder="電話番号"
+                            type="text"
+                            compname="PhoneNumber"
+                            name="PhoneNumber_countrycode"
+                            phoneFormat="1"
+                            isCountryCodeEnabled="false"
+                            maxlength="20"
+                            value=""
+                            fieldType="11"
+                            id="international_PhoneNumber_countrycode"
+                          />
+                        </div>
+                        <div class="col-md-12 mt-4 hide">
+                          <input
+                            class="form-control"
+                            placeholder="Business Address"
+                            id="business-address-input"
+                            type="hidden"
+                            name="SingleLine4"
+                            value=""
+                            fieldType="1"
+                            maxlength="255"
+                          />
+                        </div>
+                        <div class="col-md-6 mt-4 hide">
+                          <input
+                            class="form-control"
+                            placeholder="Business Website"
+                            id="business-website-input"
+                            type="hidden"
+                            name="SingleLine5"
+                            value=""
+                            fieldType="1"
+                            maxlength="255"
+                          />
+                        </div>
+                        <div class="col-md-6 mt-4 hide">
+                          <input
+                            class="form-control"
+                            placeholder="Business Phone"
+                            id="business-phone-input"
+                            type="hidden"
+                            name="SingleLine6"
+                            value=""
+                            fieldType="1"
+                            maxlength="255"
+                          />
+                        </div>
+                        <div class="col-md-12 mt-4">
+                          <select name="Dropdown" class="form-control">
+                            <option selected="true" value="">
+                              使用予定の店舗数を選択してください
+                            </option>
+                            <option value="Single Store">1店舗のみ</option>
+                            <option value="2-20 Stores">2-20店舗</option>
+                            <option value="Over 20 Stores">20店舗以上</option>
+                          </select>
+                        </div>
+                        <div class="col-md-12 mt-4">
+                          <button
+                            class="btn primary-btn full-width uppercase bold-font"
+                            type="submit"
+                          >
+                            提出
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+              <div class="row">
+                <div class="col-md-10 col-md-offset-1 text-center">
+                  <h2>applovaで自社サービスを<br />デジタル化しよう！</h2>
+                </div>
+              </div>
+              <div class="row mt-5 text-center">
+                <div class="col-sm-3 col-xs-6">
+                  <a href="../cafe.html" class="page-section__menu-icon">
+                    <div class="page-section__menu-icon-wrapper">
+                      <div class="page-section__menu-icon-img">
+                        <img
+                          data-src="../images/products/mobile-store/cafe-icon.png"
+                          class="lazy"
+                        />
+                      </div>
+                    </div>
+                    <h4 class="bold-font">カフェの例</h4>
+                  </a>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                  <a
+                    href="../casual-dining-restaurant.html"
+                    class="page-section__menu-icon"
+                  >
+                    <div class="page-section__menu-icon-wrapper">
+                      <div class="page-section__menu-icon-img">
+                        <img
+                          data-src="../images/products/mobile-store/casual-dining-icon.png"
+                          class="lazy"
+                        />
+                      </div>
+                    </div>
+                    <h4 class="bold-font">レストランの例</h4>
+                  </a>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                  <a href="../pizzeria.html" class="page-section__menu-icon">
+                    <div class="page-section__menu-icon-wrapper">
+                      <div class="page-section__menu-icon-img">
+                        <img
+                          data-src="../images/products/mobile-store/pizzeria-icon.png"
+                          class="lazy"
+                        />
+                      </div>
+                    </div>
+                    <h4 class="bold-font">ピザ屋の例</h4>
+                  </a>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                  <a href="../food-truck.html" class="page-section__menu-icon">
+                    <div class="page-section__menu-icon-wrapper">
+                      <div class="page-section__menu-icon-img">
+                        <img
+                          data-src="../images/products/mobile-store/food-truck-icon.png"
+                          class="lazy"
+                        />
+                      </div>
+                    </div>
+                    <h4 class="bold-font">フードトラックの例</h4>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-section__theme-color-border"></div>
+      </div>
+
+      <div class="page-section pb-0">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+              <div class="row">
+                <div class="col-md-12 text-center">
+                  <h2>伸びていくオンライン注文市場への対応を！</h2>
+                  <p class="text-medium">
+                    L.E.K.研究会の統計データによると、2023年までに<br />飲食業オンライン注文の成長率が22％超えると予想されています。
+                  </p>
+                  <p class="text-medium">
+                    また、消費者の半数以上の注文がレストランアプリや<br />ウェブサイトからの直接注文になる、とされています。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-section pt-0">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1 text-center">
+              <div class="page-section__dark-hr">
+                <hr />
+              </div>
+              <div class="row">
+                <div class="col-md-12 text-center mb-5">
+                  <h2 class="">飲食店舗のデジタル化のポイント</h2>
+                </div>
+                <div class="col-md-12">
+                  <div class="outlined-design" style="border-color: #d3d3d3">
+                    <span class="text-overlapped"
+                      ><img
+                        data-src="/images/products/mobile-store/consumer-ratings-icon-small.png"
+                        class="lazy"
+                    /></span>
+                    <h4 class="mt-0">消費者体験を想像する</h4>
+                    <p class="mt-0">
+                      お客さまの生活は、今やスマホ中心に成り立っています。毎日のSNSやチャットは、すべてスマホで完結しています。
+                      同様に、あなたのお店のメニューのチェックや、注文・決済も全てスマホで対応できることが望まれています。
+                    </p>
+                  </div>
+                </div>
+
+                <div class="col-md-12 mt-5">
+                  <div class="outlined-design" style="border-color: #d3d3d3">
+                    <span class="text-overlapped"
+                      ><img
+                        data-src="/images/products/mobile-store/no-telephone-calls-icon-small.png"
+                        class="lazy"
+                    /></span>
+                    <h4 class="mt-0">電話注文を減らそう</h4>
+                    <p>
+                      繁忙時の電話注文は、店舗のオペレーションを分断します。また、聞き間違いによるエラーなど店舗にとっても、お客様にとっても不幸なことが多いです。思い切って減らしていく努力をしましょう。
+                    </p>
+                  </div>
+                </div>
+
+                <div class="col-md-12 mt-5">
+                  <div class="outlined-design" style="border-color: #d3d3d3">
+                    <span class="text-overlapped"
+                      ><img
+                        data-src="/images/products/mobile-store/Trending-icon-small.png"
+                        class="lazy"
+                    /></span>
+                    <h4 class="mt-0">デジタル化して当たり前に</h4>
+                    <p>
+                      大手企業が大きな資金を使いデジタル化を推進します。お客様はそのシステムが当たり前になり、システムがない場合の利便性に満足できなっています。自社サービスのデジタル化は、もはや対応して当たり前になっています。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-section pt-0">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1 text-center">
+              <h2>applovaで自社サービスをデジタル化しよう！</h2>
+              <p class="text-medium main-theme-color">
+                <!--                            <a class="main-theme-color" href="tel:16502429992"><strong>Call:</strong> +1 (650) 242 9992</a> &nbsp;&nbsp;-->
+                <a class="main-theme-color" href="mailto:sales@applovajp.com"
+                  ><strong>Email:</strong> sales@applovajp.com
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      applova-include-html="../common-files/child-page-footer.html"
+      class="footer"
+    >
+      <!--Footer content goes here-->
+    </div>
+
+    <!--Calculate ROI Modal -->
+    <div
+      class="modal fade large-modal contact-us-modal"
+      id="calculate-roi-modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="myModalLabel"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body with-iframe">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <iframe
+              src="https://merchant.applova.io/applova/request-roi-simple.htm?ref=mobile-store-201908&popup=true"
+              class="full-width"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+    <script
+      type="text/javascript"
+      src="../css/bootstrap-3.3.7-dist/js/bootstrap.min.js"
+    ></script>
+    <script type="text/javascript" src="../js/float-panel.js"></script>
+    <script type="text/javascript" src="../js/jquery.lazy.min.js"></script>
+    <script type="text/javascript" src="../js/common-20200122.min.js"></script>
+
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVfOgjVSF-1xAmGPrHOUSKRp0pHRt3GFE&libraries=places&callback=initMap"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://crm.zoho.com/crm/javascript/zcga.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://forms.zoho.com/js/zf_gclid.js"
+    ></script>
+  </body>
+</html>

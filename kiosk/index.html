@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Self-Ordering Kiosk Systems | Restaurant Software | Applova</title>
+
+    <link href="https://applovajp.com/kiosk" rel="canonical" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta
+      content="店内キオスク（自動注文端末）アプリ | Applova"
+      property="title"
+    />
+    <meta
+      content="Applova Inc.の最先端の自動注文端末システムで店内注文を自動化します。利便性を高め、インタラクティブで効率的な注文体験を提供します。"
+      property="description"
+    />
+    <meta content="https://applovajp.com/kiosk" property="og:url" />
+    <meta property="og:site_name" content="Applova" />
+    <meta
+      content="Applova Inc.の最先端の自動注文端末システムで店内注文を自動化します。利便性を高め、インタラクティブで効率的な注文体験を提供します。"
+      name="description"
+    />
+    <meta content="店内キオスク（自動注文端末）アプリ | Applova" name="title" />
+
+    <!-- Page hiding snippet (recommended)  -->
+    <style>
+      .async-hide {
+        opacity: 0 !important;
+      }
+    </style>
+    <!-- <script>
+      (function (a, s, y, n, c, h, i, d, e) {
+        s.className += " " + y;
+        h.start = 1 * new Date();
+        h.end = i = function () {
+          s.className = s.className.replace(RegExp(" ?" + y), "");
+        };
+        (a[n] = a[n] || []).hide = h;
+        setTimeout(function () {
+          i();
+          h.end = null;
+        }, c);
+        h.timeout = c;
+      })(window, document.documentElement, "async-hide", "dataLayer", 4000, {
+        "GTM-TWXGC9C": true,
+      });
+    </script> -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-121888509-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-121888509-1", {
+        optimize_id: "GTM-TWXGC9C",
+      });
+    </script> -->
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          "gtm.start": new Date().getTime(),
+          event: "gtm.js",
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-TM3J9FF");
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- For Facebook -->
+    <meta
+      content="店内キオスク（自動注文端末）アプリ | Applova"
+      property="og:title"
+    />
+    <meta
+      content="https://applovajp.com/images/products/kiosk/kiosk-thumbnail.jpg"
+      property="og:image"
+    />
+    <meta
+      content="Applova Inc.の最先端の自動注文端末システムで店内注文を自動化します。利便性を高め、インタラクティブで効率的な注文体験を提供します。"
+      name="og:description"
+    />
+
+    <!-- For Google -->
+    <meta name="keywords" content="" />
+
+    <meta name="author" content="admin" />
+    <meta name="copyright" content="Applova.io" />
+    <meta name="application-name" content="Applova" />
+
+    <!-- For Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      content="店内キオスク（自動注文端末）アプリ | Applova"
+      name="twitter:title"
+    />
+    <meta
+      content="Applova Inc.の最先端の自動注文端末システムで店内注文を自動化します。利便性を高め、インタラクティブで効率的な注文体験を提供します。"
+      name="twitter:description"
+    />
+    <meta
+      content="https://applovajp.com/images/products/kiosk/kiosk-thumbnail.jpg"
+      name="twitter:image"
+    />
+    <meta name="twitter:label1" value="Reading time" />
+    <meta name="twitter:data1" value="5 minutes" />
+
+    <link rel="icon" href="../images/applova-logo-black-fav.png" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/bootstrap-3.3.7-dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css" />
+
+    <link rel="stylesheet" type="text/css" href="../css/gotham-font.css" />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/new-common-20200409.min.css"
+    />
+    <!-- <script>
+      (function (i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "https://www.google-analytics.com/analytics.js",
+        "ga"
+      );
+
+      ga("create", "UA-102108864-1", "auto");
+      ga("send", "pageview");
+    </script> -->
+
+    <!--Facebook Pixels Code -->
+    <!-- <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "1237984449552745", {
+        em: "support@applova.io",
+      });
+      fbq("track", "PageView");
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        alt="Facebook Pixel Code"
+        title="Facebook Pixel Code"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=1237984449552745&ev=PageView&noscript=1"
+    /></noscript> -->
+    <!-- <script type="text/javascript" src="../js/top-js-20190822.js"></script> -->
+    <!-- End Facebook Pixels Code -->
+  </head>
+
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-TM3J9FF"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      >
+      </iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- For Zoho SalesIQ -->
+    <script type="text/javascript">
+      var $zoho = $zoho || {};
+      $zoho.salesiq = $zoho.salesiq || {
+        widgetcode:
+          "beaba25195d86f0f3d9ee0c020a01c11fc4c5b0c05b4c227bd9524ce4e9d7e5e",
+        values: {},
+        ready: function () {},
+      };
+      var d = document;
+      s = d.createElement("script");
+      s.type = "text/javascript";
+      s.id = "zsiqscript";
+      s.defer = true;
+      s.src = "https://salesiq.zoho.com/widget";
+      t = d.getElementsByTagName("script")[0];
+      t.parentNode.insertBefore(s, t);
+      d.write("<div id='zsiqwidget'></div>");
+    </script>
+    <header applova-include-html="../common-files/child-page-header.html">
+      <!--Header content goes here-->
+    </header>
+
+    <div class="wrapper">
+      <div class="banner-section banner-section__home">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+              <div class="row">
+                <div class="col-sm-6">
+                  <h1 class="bold-font main-theme-color">自動注文端末</h1>
+                  <h2 class="lite-font">
+                    あらゆる規模のレストランに合うように設計されています。
+                  </h2>
+                  <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                      <a
+                        class="btn primary-btn circle-btn large-btn bold-font mt-4 uppercase"
+                        href="../request-demo.html"
+                        id="kiosk-home-main-banner-get-demo-btn"
+                        >無料お試し</a
+                      >
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                      <a
+                        class="btn calculate-btn mt-4"
+                        target="_blank"
+                        href="https://merchant.applova.io/applova/request-roi-simple.htm?ref=kiosk-home-201909"
+                      >
+                        <span class="calculate-btn__icon"
+                          ><img
+                            data-src="../images/products/kiosk/cal-icon-white.png"
+                            class="lazy"
+                            alt=""
+                        /></span>
+                        <span class="calculate-btn__main-text">計算</span>
+                        <span class="calculate-btn__sub-text sub-topic"
+                          >投資収益率</span
+                        >
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 banner-section__main-image">
+                  <img
+                    src="../images/products/kiosk/kisok-device-1.png"
+                    alt="Applova Kiosk Apps"
+                    title="Applova Kiosk Apps"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page-section page-section__overlapping">
+        <div class="text-center">
+          <h2>Applova自動注文端末ではどのようなことが出来ますか？</h2>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+              <div class="row mt-5 text-center">
+                <div class="col-sm-4">
+                  <img
+                    data-src="../images/products/mobile-store/save-money-icon.png"
+                    class="lazy"
+                    alt=""
+                  />
+                  <h4 class="bold-font">すぐに収益の節約が可能</h4>
+                  <p class="mt-4">
+                    注文プロセスを自動化させることで不要なスタッフ用のコストを削減することができ、収益の節約が可能となります。
+                  </p>
+                </div>
+                <div class="col-sm-4">
+                  <img
+                    data-src="../images/products/mobile-store/double-profit-icon.png"
+                    class="lazy"
+                    alt=""
+                  />
+                  <h4 class="bold-font">レストランの収益が大幅にアップ</h4>
+                  <p class="mt-4">
+                    Applova自動注文端末を導入することで注文数を20%以上高くなり、ROIも6ヶ月未満でクリアすることが可能となります。
+                  </p>
+                </div>
+                <div class="col-sm-4">
+                  <img
+                    data-src="../images/products/mobile-store/more-customers-icon.png"
+                    class="lazy"
+                    alt=""
+                  />
+                  <h4 class="bold-font">新しい顧客に対する引き付け向上</h4>
+                  <p class="mt-4">
+                    魅力的な注文メニュー、注文時の利便さおよび口コミによるお勧めにより顧客の満足度が急激にアップします。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page-section page-section__mobile-text-center">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+              <div class="row">
+                <div class="col-md-5">
+                  <div class="page-section__heading-background">
+                    <div class="page-section__heading-background-square"></div>
+                    <h2 class="bold-font">
+                      注文プロセスを自動化するとで、スタッフコストの削減および運用の効率化が可能
+                    </h2>
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <div class="row">
+                    <div class="col-md-12 col-sm-4 mb-4">
+                      <div class="row">
+                        <div class="col-md-2">
+                          <img
+                            data-src="../images/products/mobile-store/staff-small-icon.png"
+                            class="lazy"
+                            alt=""
+                          />
+                        </div>
+                        <div class="col-md-10">
+                          <h4 class="bold-font">
+                            スタッフからより高いレベルのサービスの提供
+                          </h4>
+                          <p>
+                            注文プロセスを自動化することで、スタッフが顧客との交流やレストランスビジネスの拡大に集中させることが出来ます。
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12 col-sm-4 mb-4">
+                      <div class="row">
+                        <div class="col-md-2">
+                          <img
+                            data-src="../images/products/mobile-store/delight-customers-small-icon.png"
+                            class="lazy"
+                            alt=""
+                          />
+                        </div>
+                        <div class="col-md-10">
+                          <h4 class="bold-font">
+                            レストランの運営をもっと効果的に
+                          </h4>
+                          <p>
+                            Applova自動注文端末はレジ用のPOS端末、キッチンディスプレイ端末およびPAシステムを一体化することで、スタッフの注文プロセスに関わりを減らすことが出来ます。このソリューションによりレストランスビジネスを著しくに成長していきます。
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12 col-sm-4 mb-4">
+                      <div class="row">
+                        <div class="col-md-2">
+                          <img
+                            data-src="../images/products/mobile-store/reduce-waste-small-icon.png"
+                            class="lazy"
+                            alt=""
+                          />
+                        </div>
+                        <div class="col-md-10">
+                          <h4 class="bold-font">
+                            注文エラーの減少およびインベントリの最適化
+                          </h4>
+                          <p>
+                            顧客自身で注文を行うことで注文エラー数をゼロかすることができ、注文エラーにより発生するやり直し注文を避けることが可能となります。さらに、Applova自動注文端末分析の機能を利用することで、レストランスビジネスにおいてより効果的な計画を立てるための貴重な情報を取得することができます。
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="page-section__dark-hr">
+                <hr />
+              </div>
+              <div class="row">
+                <div class="col-md-5">
+                  <div class="page-section__heading-background">
+                    <div class="page-section__heading-background-square"></div>
+                    <h2 class="bold-font">
+                      顧客の注文体験の増加ににつれてレストラン利益の向上
+                    </h2>
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <div class="row">
+                    <div class="col-md-12 col-sm-4">
+                      <div class="row">
+                        <div class="col-md-2">
+                          <img
+                            data-src="../images/products/mobile-store/ticket-size-small-icon.png"
+                            class="lazy"
+                            alt=""
+                          />
+                        </div>
+                        <div class="col-md-10">
+                          <h4 class="bold-font">注文数を20%から30%で増加</h4>
+                          <p>
+                            素敵なプロンプト、魅力的なメニューの画像およびパーソナライズされたレコメンデーションにより、Applova自動注文端末はレストランの注文数を２０％以上上げます。
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12 col-sm-4 mb-4">
+                      <div class="row">
+                        <div class="col-md-2">
+                          <img
+                            data-src="../images/products/mobile-store/less-time-small-icon.png"
+                            class="lazy"
+                            alt=""
+                          />
+                        </div>
+                        <div class="col-md-10">
+                          <h4 class="bold-font">
+                            短時間でより多くの注文が可能
+                          </h4>
+                          <p>
+                            Applova自動注文端末はシンプルなデザインのため、顧客が簡単に注文を行ったり、自分で支払いをしたりすることが出来ます。また、自動注文端末はレストランの運営中のシステムと簡単に統合することも可能です。
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12 col-sm-4 mb-4">
+                      <div class="row">
+                        <div class="col-md-2">
+                          <img
+                            data-src="../images/products/mobile-store/increase-money-small-icon.png"
+                            class="lazy"
+                            alt=""
+                          />
+                        </div>
+                        <div class="col-md-10">
+                          <h4 class="bold-font">ROIの最大化</h4>
+                          <p>
+                            Applova自動注文端末はレストランに対するたった一回だけの投資のためスマートな方法です。どんな規模のレストランにおいても6ヶ月以内にビジネスを拡大させながらROIを達成することが出来ます。
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="page-section__dark-hr">
+                <hr />
+              </div>
+              <div class="row">
+                <div class="col-md-5">
+                  <div class="page-section__heading-background">
+                    <div class="page-section__heading-background-square"></div>
+                    <h2 class="bold-font">
+                      全体的な注文体験を通じて顧客の満足度アップ
+                    </h2>
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <div class="row">
+                    <div class="col-md-12 col-sm-4">
+                      <div class="row">
+                        <div class="col-md-2">
+                          <img
+                            data-src="../images/products/mobile-store/clear-illustration-small-icon.png"
+                            class="lazy"
+                            alt=""
+                          />
+                        </div>
+                        <div class="col-md-10">
+                          <h4 class="bold-font">直感的で魅力的に</h4>
+                          <p>
+                            レストランのメニューが大型のタッチパネル上にシンプルかつ魅力的な食品画像で表示させ、顧客に自分のペースで注文を行うためにナビゲートします。
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12 col-sm-4 mb-4">
+                      <div class="row">
+                        <div class="col-md-2">
+                          <img
+                            data-src="../images/products/mobile-store/digital-stamp-card-small-icon.png"
+                            class="lazy"
+                            alt=""
+                          />
+                        </div>
+                        <div class="col-md-10">
+                          <h4 class="bold-font">
+                            デジタルスタンプで顧客のモティベーション向上
+                          </h4>
+                          <p>
+                            Applovaローヤルティプログラムは顧客に再注文させてもらうための効果的な機能です。顧客は商品を購入する際にデジタルスタンプを集めることができ、貴重なリワードを獲得が可能となります。再注文につれてローヤルな顧客が増えていきます。
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12 col-sm-4 mb-4">
+                      <div class="row">
+                        <div class="col-md-2">
+                          <img
+                            data-src="../images/products/mobile-store/self-checkout-small-icon.png"
+                            class="lazy"
+                            alt=""
+                          />
+                        </div>
+                        <div class="col-md-10">
+                          <h4 class="bold-font">
+                            簡単で安全なセルフチェックアウト
+                          </h4>
+                          <p>
+                            Applovaは大手決済プロバイダーと提携しており、自動注文端末でもシームレスかつ安全で支払いできるようにセルフチェックアウト機能を提供します。顧客はクレジットカードまたはデビットカードを利用して簡単に決済を行うことが出来ます。
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-section">
+        <div class="container">
+          <div class="row d-flex">
+            <div class="col-md-10 col-md-offset-1">
+              <div class="row d-flex align-items-center">
+                <div
+                  class="row d-flex justify-content-center flex-flow-row-wrap"
+                >
+                  <div class="col-md-8 text-center mb-5">
+                    <h2 class="bold-font">
+                      <span class="main-theme-color"
+                        >他のスマートな注文方法および </span
+                      >技術について
+                    </h2>
+                  </div>
+                  <div class="col-md-10">
+                    <div class="row text-center">
+                      <a
+                        href="../products/online-ordering.html"
+                        class="col-sm-6 clickable-card"
+                      >
+                        <img
+                          data-src="../images/webinar/applova-online-ordering-card-back.png"
+                          alt=""
+                          class="lazy w-100 p-2"
+                        />
+                        <h4 class="bold-font">オンライン注文</h4>
+                        <div>
+                          <p
+                            class="link"
+                            href="../products/online-ordering.html"
+                          >
+                            もっと読む <i class="fa fa-angle-right"></i>
+                          </p>
+                        </div>
+                      </a>
+
+                      <a
+                        href="../products/mobile-order-ahead/"
+                        class="col-sm-6 clickable-card"
+                      >
+                        <img
+                          data-src="../images/webinar/applova-mobile-ahead-card-back.png"
+                          alt=""
+                          class="lazy w-100"
+                        />
+                        <h4 class="bold-font">モバイル注文</h4>
+                        <div>
+                          <p
+                            class="link"
+                            href="../products/mobile-order-ahead/"
+                          >
+                            もっと読む <i class="fa fa-angle-right"></i>
+                          </p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-section gray-bg">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+              <div class="row">
+                <div class="col-md-5 col-sm-4">
+                  <h2 class="bold-font">Applova専門チームに相談しましょう！</h2>
+                  <h2 class="lite-font">
+                    お客様に適した最高のソリューションを選ぶために協力いたします。
+                  </h2>
+                </div>
+                <div class="col-md-7 col-sm-8">
+                  <div class="page-section__card mt-4">
+                    <form
+                      action="https://forms.zohopublic.com/Applova/form/RequestDemo/formperma/wcqQWj8_zbhOdW3_5vmDlwi3l8zTksr_xjZnyv5E1-k/htmlRecords/submit"
+                      name="form"
+                      id="form"
+                      method="POST"
+                      accept-charset="UTF-8"
+                      enctype="multipart/form-data"
+                    >
+                      <input
+                        type="hidden"
+                        name="zf_referrer_name"
+                        value=""
+                      /><!-- To Track referrals , place the referrer name within the " " in the above hidden input field -->
+                      <input
+                        type="hidden"
+                        name="zf_redirect_url"
+                        value=""
+                      /><!-- To redirect to a specific page after record submission , place the respective url within the " " in the above hidden input field -->
+                      <input
+                        type="hidden"
+                        name="zc_gad"
+                        value=""
+                      /><!-- If GCLID is enabled in Zoho CRM Integration, click details of AdWords Ads will be pushed to Zoho CRM -->
+                      <div class="row home-page__get-demo-section-1">
+                        <div class="col-sm-8">
+                          <input
+                            id="business-name-input"
+                            class="form-control"
+                            placeholder="御社の事業名を教えてください"
+                            type="text"
+                            name="SingleLine1"
+                            value=""
+                            fieldType="1"
+                            maxlength="255"
+                          />
+                        </div>
+                        <div class="col-sm-4">
+                          <a
+                            class="btn primary-btn full-width uppercase bold-font"
+                            onclick="getDemoHomeSectionClick()"
+                            >無料お試し</a
+                          >
+                        </div>
+                      </div>
+                      <div class="row home-page__get-demo-section-2 hide">
+                        <div class="col-md-12">
+                          <input
+                            class="form-control"
+                            type="text"
+                            placeholder="名前"
+                            type="text"
+                            name="SingleLine"
+                            value=""
+                            fieldType="1"
+                            maxlength="255"
+                          />
+                        </div>
+                        <div class="col-md-6 mt-4">
+                          <input
+                            class="form-control"
+                            placeholder="Email"
+                            type="text"
+                            maxlength="255"
+                            name="Email"
+                            value=""
+                            fieldType="9"
+                          />
+                        </div>
+                        <div class="col-md-6 mt-4">
+                          <input
+                            class="form-control"
+                            placeholder="電話番号"
+                            type="text"
+                            compname="PhoneNumber"
+                            name="PhoneNumber_countrycode"
+                            phoneFormat="1"
+                            isCountryCodeEnabled="false"
+                            maxlength="20"
+                            value=""
+                            fieldType="11"
+                            id="international_PhoneNumber_countrycode"
+                          />
+                        </div>
+                        <div class="col-md-12 mt-4 hide">
+                          <input
+                            class="form-control"
+                            placeholder="Business Address"
+                            id="business-address-input"
+                            type="hidden"
+                            name="SingleLine4"
+                            value=""
+                            fieldType="1"
+                            maxlength="255"
+                          />
+                        </div>
+                        <div class="col-md-6 mt-4 hide">
+                          <input
+                            class="form-control"
+                            placeholder="Business Website"
+                            id="business-website-input"
+                            type="hidden"
+                            name="SingleLine5"
+                            value=""
+                            fieldType="1"
+                            maxlength="255"
+                          />
+                        </div>
+                        <div class="col-md-6 mt-4 hide">
+                          <input
+                            class="form-control"
+                            placeholder="Business Phone"
+                            id="business-phone-input"
+                            type="hidden"
+                            name="SingleLine6"
+                            value=""
+                            fieldType="1"
+                            maxlength="255"
+                          />
+                        </div>
+                        <div class="col-md-12 mt-4">
+                          <select name="Dropdown" class="form-control">
+                            <option selected="true" value="">
+                              使用予定の店舗数を選択してください
+                            </option>
+                            <option value="Single Store">1店舗のみ</option>
+                            <option value="2-20 Stores">2-20店舗</option>
+                            <option value="Over 20 Stores">20店舗以上</option>
+                          </select>
+                        </div>
+                        <div class="col-md-12 mt-4">
+                          <button
+                            class="btn primary-btn full-width uppercase bold-font"
+                            type="submit"
+                          >
+                            提出
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+              <div class="row">
+                <div class="col-md-10 col-md-offset-1 text-center">
+                  <h2>
+                    Applovaシステムをカスタマイズして<br />レストランを再構築しましょう！
+                  </h2>
+                </div>
+              </div>
+              <div class="row mt-5 text-center">
+                <div class="col-sm-3 col-xs-6">
+                  <a href="../cafe.html" class="page-section__menu-icon">
+                    <div class="page-section__menu-icon-wrapper">
+                      <div class="page-section__menu-icon-img">
+                        <img
+                          data-src="../images/products/mobile-store/cafe-icon.png"
+                          class="lazy"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <h4 class="bold-font">カフェ</h4>
+                  </a>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                  <a
+                    href="../casual-dining-restaurant.html"
+                    class="page-section__menu-icon"
+                  >
+                    <div class="page-section__menu-icon-wrapper">
+                      <div class="page-section__menu-icon-img">
+                        <img
+                          data-src="../images/products/mobile-store/casual-dining-icon.png"
+                          class="lazy"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <h4 class="bold-font">レストラン</h4>
+                  </a>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                  <a href="../pizzeria.html" class="page-section__menu-icon">
+                    <div class="page-section__menu-icon-wrapper">
+                      <div class="page-section__menu-icon-img">
+                        <img
+                          data-src="../images/products/mobile-store/pizzeria-icon.png"
+                          class="lazy"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <h4 class="bold-font">ピザ屋</h4>
+                  </a>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                  <a href="../food-truck.html" class="page-section__menu-icon">
+                    <div class="page-section__menu-icon-wrapper">
+                      <div class="page-section__menu-icon-img">
+                        <img
+                          data-src="../images/products/mobile-store/food-truck-icon.png"
+                          class="lazy"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <h4 class="bold-font">フードトラック</h4>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-section__theme-color-border"></div>
+      </div>
+    </div>
+
+    <div
+      applova-include-html="/common-files/child-page-footer.html"
+      class="footer"
+    >
+      <!--Footer content goes here-->
+    </div>
+
+    <script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+    <script
+      type="text/javascript"
+      src="../css/bootstrap-3.3.7-dist/js/bootstrap.min.js"
+    ></script>
+    <script type="text/javascript" src="../js/float-panel.js"></script>
+    <script type="text/javascript" src="../js/scrollBar.js"></script>
+    <script type="text/javascript" src="../js/jquery.lazy.min.js"></script>
+    <script type="text/javascript" src="../js/common-20200122.min.js"></script>
+
+    <script>
+      $(".sb-container").scrollBox();
+    </script>
+
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVfOgjVSF-1xAmGPrHOUSKRp0pHRt3GFE&libraries=places&callback=initMap"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://crm.zoho.com/crm/javascript/zcga.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://forms.zoho.com/js/zf_gclid.js"
+    ></script>
+  </body>
+</html>

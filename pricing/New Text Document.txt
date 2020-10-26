@@ -1,0 +1,1 @@
+To Restore the "applovajp.com/pricing", moved the files in folder "Removed on 12-10-2020" in to the "pricing" folder

@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      How to set up an online ordering system |
+      現在のレストランを支援するオンライン注文システムをセットアップできますか？
+    </title>
+    <link
+      href="https://applovajp.com/blog/setup-online-ordering-system"
+      rel="canonical"
+    />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta
+      property="title"
+      content="How to set up an online ordering system | レストランを支援する事前注文システムをセットアップできますか？"
+    />
+    <meta
+      property="description"
+      content="The Applova Inc blog provides detailed insights and guides on how to set up an online ordering system for your restaurant. Get ahead with technology."
+    />
+    <meta
+      content="https://applovajp.com/blog/setup-online-ordering-system"
+      property="og:url"
+    />
+    <meta property="og:site_name" content="Applova" />
+    <meta
+      name="description"
+      content="The Applova Inc blog provides detailed insights and guides on how to set up an online ordering system for your restaurant. Get ahead with technology."
+    />
+    <meta
+      name="title"
+      content="How to set up an online ordering system | レストランを支援する事前注文システムをセットアップできますか？"
+    />
+    <!-- For Facebook -->
+    <meta
+      property="og:title"
+      content="How to set up an online ordering system | "
+    />
+    <meta
+      content="https://applovajp.com/images/blog/how-to-setup-online-ordering-system-guide-applvoa-blog.jpg"
+      property="og:image"
+    />
+    <meta
+      name="og:description"
+      content="The Applova Inc blog provides detailed insights and guides on how to set up an online ordering system for your restaurant. Get ahead with technology."
+    />
+    <!-- Page hiding snippet (recommended)  -->
+    <style>
+      .async-hide {
+        opacity: 0 !important;
+      }
+    </style>
+    <!-- <script>
+      (function (a, s, y, n, c, h, i, d, e) {
+        s.className += " " + y;
+        h.start = 1 * new Date();
+        h.end = i = function () {
+          s.className = s.className.replace(RegExp(" ?" + y), "");
+        };
+        (a[n] = a[n] || []).hide = h;
+        setTimeout(function () {
+          i();
+          h.end = null;
+        }, c);
+        h.timeout = c;
+      })(window, document.documentElement, "async-hide", "dataLayer", 4000, {
+        "GTM-TWXGC9C": true,
+      });
+    </script> -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-121888509-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-121888509-1", {
+        optimize_id: "GTM-TWXGC9C",
+      });
+    </script> -->
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          "gtm.start": new Date().getTime(),
+          event: "gtm.js",
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-TM3J9FF");
+    </script>
+    <!-- End Google Tag Manager -->
+    <!-- For Google -->
+    <meta name="keywords" content="" />
+    <meta name="author" content="admin" />
+    <meta name="copyright" content="Applova.io" />
+    <meta name="application-name" content="Applova" />
+    <!-- For Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="How to set up an online ordering system | レストランを支援する事前注文システムをセットアップできますか？"
+    />
+    <meta
+      name="twitter:description"
+      content="The Applova Inc blog provides detailed insights and guides on how to set up an online ordering system for your restaurant. Get ahead with technology."
+    />
+    <meta
+      content="https://applovajp.com/images/blog/how-to-setup-online-ordering-system-guide-applvoa-blog.jpg"
+      name="twitter:image"
+    />
+    <meta name="twitter:label1" value="Reading time" />
+    <meta name="twitter:data1" value="5 minutes" />
+    <link rel="icon" href="../images/applova-logo-black-fav.png" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/bootstrap-3.3.7-dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/gotham-font.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/new-common-20200409.min.css"
+    />
+    <!-- <script>
+      (function (i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "https://www.google-analytics.com/analytics.js",
+        "ga"
+      );
+      ga("create", "UA-102108864-1", "auto");
+      ga("send", "pageview");
+    </script> -->
+
+    <!-- Facebook Pixel Code -->
+    <!-- <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "1237984449552745", {
+        em: "support@applova.io",
+      });
+      fbq("track", "PageView");
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        alt="Facebook Pixel Code"
+        title="Facebook Pixel Code"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=1237984449552745&ev=PageView&noscript=1"
+    /></noscript> -->
+    <!-- <script type="text/javascript" src="../js/top-js-20190822.js"></script> -->
+    <!--End  Facebook Pixel Code -->
+  </head>
+
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-TM3J9FF"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- For Zoho SalesIQ -->
+    <script type="text/javascript">
+      var $zoho = $zoho || {};
+      $zoho.salesiq = $zoho.salesiq || {
+        widgetcode:
+          "beaba25195d86f0f3d9ee0c020a01c11fc4c5b0c05b4c227bd9524ce4e9d7e5e",
+        values: {},
+        ready: function () {},
+      };
+      var d = document;
+      s = d.createElement("script");
+      s.type = "text/javascript";
+      s.id = "zsiqscript";
+      s.defer = true;
+      s.src = "https://salesiq.zoho.com/widget";
+      t = d.getElementsByTagName("script")[0];
+      t.parentNode.insertBefore(s, t);
+      d.write("<div id='zsiqwidget'></div>");
+    </script>
+    <header applova-include-html="../common-files/child-page-header.html">
+      <!--Header content goes here-->
+    </header>
+    <div class="previous-page-link">
+      <a href="optimizing-your-mobile-app-for-upselling.html">
+        <img data-src="../images/arrows-left.png" class="lazy" />
+        <p>Previous Page</p>
+      </a>
+    </div>
+    <div class="wrapper">
+      <div class="banner-section banner-section__blog">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="image-link-card image-link-card-large">
+                    <div
+                      class="image-link-card__header"
+                      style="
+                        background-image: url('../images/blog/how-to-setup-online-ordering-system-guide-applvoa-blog.jpg');
+                      "
+                      title="how-to-setup-online-ordering-system-guide-applvoa-blog"
+                      alt="how-to-setup-online-ordering-system-guide-applvoa-blog"
+                    ></div>
+                    <div class="image-link-card__body">
+                      <div class="row">
+                        <div class="col-xs-6">
+                          <p class="bold-font uppercase gray-color">
+                            Restaurant Management
+                          </p>
+                        </div>
+                        <div class="col-xs-6 text-right">
+                          <p class="gray-color uppercase">May 11, 2020</p>
+                        </div>
+                      </div>
+                      <h3 class="bold-font main-theme-color">
+                        レストランを支援する事前注文システムをセットアップできますか？
+                      </h3>
+                      <div class="row mt-3">
+                        <div class="col-xs-6">
+                          <p class="bold-font uppercase gray-color">
+                            Tech | 5 Min Read
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page-section no-padding-top">
+        <ul class="document-share-options">
+          <li class="document-share-options-item">
+            <div class="fb-share">
+              <a href=""><i class="fa fa-facebook"></i></a>
+            </div>
+          </li>
+          <li class="document-share-options-item">
+            <div class="twitter-share">
+              <a href=""><i class="fa fa-twitter"></i></a>
+            </div>
+          </li>
+          <li class="document-share-options-item">
+            <div class="linkedin-share">
+              <a href=""><i class="fa fa-linkedin"></i></a>
+            </div>
+          </li>
+        </ul>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <p class="sub-text">
+                現時点では、コロナウイルスの影響がより強く感じられるため、オンライン注文の設定を無視すると言うことは、すべてのレストラン経営者にとって自殺となります。
+                今はオンライン注文は多くのレストランで提供されており、事実上すべての消費者が使用しています。オンライン注文のないレストランは、こんな時期で経営を続けるのが非常に難しいです。
+                特に外食産業の場合多くの消費者は簡単にお店とアクセスできることを望んでいます。そのため、現在、事前注文システムは、消費者に対応するための優れた方法となります。
+              </p>
+              <p class="sub-text">
+                事前注文システムをセットアップする方法はんでしょうか？
+                事前注文システムのセットアップについて考える前に、消費者に対する利点を理解する必要があります。
+              </p>
+
+              <ol class="sub-text mt-5">
+                <li class="mb-4">
+                  より多くの消費者-この危機的な時期に、ソーシャルメディア、電子メール、SMS、またはテレマーケティングを通じて消費者に連絡し、事前注文システムがあることを創造的に発表する機会があります。消費者が家で安全にリラックスしていながら食事を準備してもらい家に直接届けてもらいます。
+                </li>
+                <li class="mb-4">
+                  売り上げの増加-セルフサービスの注文システムを使用すると、注文が増える傾向があります。
+                  モバイルアプリまたはウェブサイトから注文すると、テイクアウトと注文の平均小切手サイズが増える可能性もあります。
+                  これは主に、オプションとチェックごとのメニュー項目の増加によるものです。
+                  注文数が多いほど、注文あたりの売上が増加します。
+                </li>
+                <li class="mb-4">
+                  効率的な注文-電話で注文する際のエラーがなくなり、無駄がなくなりました。オンライン注文では、詳細な注文と消費者情報をすぐに手に入れることが出来ます。
+                </li>
+                <li class="mb-4">
+                  4.
+                  より良い、安全な体験：COVID-19の間、誰もが社会的距離を隔てて練習していましす。
+                  それで、事前注文は、消費者とスタッフを安全に保つための最良の方法です。
+                  レストランは非接触配達または駐車場での受け取りかテイクアウトサービスを提供できます。
+                  事前注文を使用することで、消費者は電話とは異なり、通信の問題もなく、いつでもどこでも注文できます。アプリとWebサイトの注文により、消費者は注文をカスタマイズし、注文の支払いをオンラインで行うこともできます。
+                </li>
+              </ol>
+
+              <h3 class="bold-font mt-5">
+                事前注文システムを設定するにはどうすればよいでしょうか？
+                必須機能は何でしょうか？
+              </h3>
+
+              <p class="sub-text">
+                事前注文システムに必須の主な機能をいくつか紹介します。
+              </p>
+
+              <ol class="sub-text mt-5">
+                <li class="mb-4">
+                  駐車場での受け取りとテイクアウト-こんな時期に駐車場での受け取りとテイクアウトは最も重要な機能の1つです。消費者が事前注文してからレストランに行き、駐車場に到着したことをアプリからレストランに通知すると、スタッフが後部座席またはトランクに食事を届けます
+                </li>
+                <li class="mb-4">
+                  カードでのオンライン支払－現金を手で扱うことや、釣銭を扱うことは避けられます。オンラインでの支払いは非常に便利で、面倒なことはほとんどありません。
+                </li>
+                <li class="mb-4">
+                  非接触配達-社会的距離は命令であるため、消費者の玄関口で非接触配達を提供することは、コミュニティの責任あるレストランであり、スタッフと消費者を安全に保つためのステップです。
+                </li>
+                <li class="mb-4">
+                  4消費者情報をアクセス－こんな時期でもレストランの収入を伸ばせるのは消費者なので、消費者との関わり合いは非常に重要なものです。ギフトカードや食事の割引を提供して、注文を増やしてもらうことが出来ます。
+                </li>
+                <li class="mb-4">
+                  5ソーシャルメディアページに接続－ソーシャルメディアのフォローは、[今すぐ注文]ボタンをクリックするだけで簡単にWebストアに移動できます。
+                  これは、自分の壁で共有するすべてのマーケティング投稿にとって重要な行動を促すフレーズです。
+                </li>
+              </ol>
+
+              <h3 class="bold-font mt-5">
+                以下は、ビジネスに合わせてカスタマイズされた食品注文アプリを作成する方法です。
+              </h3>
+              <p class="sub-text"></p>
+              <ol class="sub-text mt-5">
+                <li class="mb-4">
+                  次のウェブサイトに行ってください。
+                  <a class="link" href="www.applovajp.com">www.applovajp.com</a>
+                </li>
+                <li class="mb-4">
+                  左上の 無料お試しボタンをクリックしてください。
+                  <a class="link" href="www.applova.io">無料お試し</a>
+                </li>
+                <li class="mb-4">フォームに必要な情報を入力してください。</li>
+                <li class="mb-4">
+                  applovaの専門家チームが商品注文アプリのデモをご案内します。
+                </li>
+                <li class="mb-4">
+                  食品注文アプリにアップロードする適切な写真セットとメニューリストの写真がある場合は、applova専門地チームから食品注文アプリの最終プレビューを表示されます。
+                </li>
+              </ol>
+              <p class="sub-text">
+                これだけで、1週間以内にロンチすることが可能です。
+              </p>
+              <p class="sub-text">
+                applovaは、信頼できるテクノロジーアドバイザーで、これらの困難な時期に、より多くのことを達成するのに役立ちます。
+              </p>
+              <p class="sub-text"></p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+              <hr />
+              <div class="row">
+                <div class="col-sm-8">
+                  <p class="text-uppercase">Published May 11, 2020</p>
+                </div>
+                <div class="col-sm-4">
+                  <ul class="document-share-options-2">
+                    <li class="document-share-options-item">
+                      <div class="fb-share">
+                        <a href=""><i class="fa fa-facebook"></i></a>
+                      </div>
+                    </li>
+                    <li class="document-share-options-item">
+                      <div class="twitter-share">
+                        <a href=""><i class="fa fa-twitter"></i></a>
+                      </div>
+                    </li>
+                    <li class="document-share-options-item">
+                      <div class="linkedin-share">
+                        <a href=""><i class="fa fa-linkedin"></i></a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page-section gray-bg">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1">
+            <div class="text-center">
+              <h2>無料デモ <span class="bold-font">を予約する</span></h2>
+            </div>
+            <div class="row mt-4">
+              <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+                <div class="page-section__card mt-4">
+                  <form
+                    action="https://forms.zohopublic.com/Applova/form/RequestDemo/formperma/wcqQWj8_zbhOdW3_5vmDlwi3l8zTksr_xjZnyv5E1-k/htmlRecords/submit"
+                    name="form"
+                    id="form"
+                    method="POST"
+                    accept-charset="UTF-8"
+                    enctype="multipart/form-data"
+                  >
+                    <input type="hidden" name="zf_referrer_name" value="" />
+                    <!-- To Track referrals , place the referrer name within the " " in the above hidden input field -->
+                    <input type="hidden" name="zf_redirect_url" value="" />
+                    <!-- To redirect to a specific page after record submission , place the respective url within the " " in the above hidden input field -->
+                    <input type="hidden" name="zc_gad" value="" />
+                    <!-- If GCLID is enabled in Zoho CRM Integration, click details of AdWords Ads will be pushed to Zoho CRM -->
+                    <div class="row home-page__get-demo-section-1">
+                      <div class="col-sm-8">
+                        <input
+                          id="business-name-input"
+                          class="form-control"
+                          placeholder="御社の事業名を教えてください"
+                          type="text"
+                          name="SingleLine1"
+                          value=""
+                          fieldType="1"
+                          maxlength="255"
+                        />
+                      </div>
+                      <div class="col-sm-4">
+                        <a
+                          class="btn primary-btn full-width uppercase bold-font"
+                          onclick="getDemoHomeSectionClick()"
+                          >無料お試し</a
+                        >
+                      </div>
+                    </div>
+                    <div class="row home-page__get-demo-section-2 hide">
+                      <div class="col-md-12">
+                        <input
+                          class="form-control"
+                          type="text"
+                          placeholder="名前"
+                          type="text"
+                          name="SingleLine"
+                          value=""
+                          fieldType="1"
+                          maxlength="255"
+                        />
+                      </div>
+                      <div class="col-md-6 mt-4">
+                        <input
+                          class="form-control"
+                          placeholder="Email"
+                          type="text"
+                          maxlength="255"
+                          name="Email"
+                          value=""
+                          fieldType="9"
+                        />
+                      </div>
+                      <div class="col-md-6 mt-4">
+                        <input
+                          class="form-control"
+                          placeholder="電話番号"
+                          type="text"
+                          compname="PhoneNumber"
+                          name="PhoneNumber_countrycode"
+                          phoneFormat="1"
+                          isCountryCodeEnabled="false"
+                          maxlength="20"
+                          value=""
+                          fieldType="11"
+                          id="international_PhoneNumber_countrycode"
+                        />
+                      </div>
+                      <div class="col-md-12 mt-4 hide">
+                        <input
+                          class="form-control"
+                          placeholder="Business Address"
+                          id="business-address-input"
+                          type="hidden"
+                          name="SingleLine4"
+                          value=""
+                          fieldType="1"
+                          maxlength="255"
+                        />
+                      </div>
+                      <div class="col-md-6 mt-4 hide">
+                        <input
+                          class="form-control"
+                          placeholder="Business Website"
+                          id="business-website-input"
+                          type="hidden"
+                          name="SingleLine5"
+                          value=""
+                          fieldType="1"
+                          maxlength="255"
+                        />
+                      </div>
+                      <div class="col-md-6 mt-4 hide">
+                        <input
+                          class="form-control"
+                          placeholder="Business Phone"
+                          id="business-phone-input"
+                          type="hidden"
+                          name="SingleLine6"
+                          value=""
+                          fieldType="1"
+                          maxlength="255"
+                        />
+                      </div>
+                      <div class="col-md-12 mt-4">
+                        <select name="Dropdown" class="form-control">
+                          <option selected="true" value="">
+                            使用予定の店舗数を選択してください
+                          </option>
+                          <option value="Single Store">1店舗のみ</option>
+                          <option value="2-20 Stores">2-20店舗</option>
+                          <option value="Over 20 Stores">20店舗以上</option>
+                        </select>
+                      </div>
+                      <div class="col-md-12 mt-4">
+                        <button
+                          class="btn primary-btn full-width uppercase bold-font"
+                          type="submit"
+                        >
+                          提出
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page-section">
+        <div class="text-center">
+          <h2>Related Articles</h2>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+              <div
+                applova-include-html="../common-files/tech-related-blog-posts.html"
+              >
+                <!--Recent Posts go here-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      applova-include-html="../common-files/child-page-footer.html"
+      class="footer"
+    >
+      <!--Footer content goes here-->
+    </div>
+    <script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+    <script
+      type="text/javascript"
+      src="../css/bootstrap-3.3.7-dist/js/bootstrap.min.js"
+    ></script>
+    <script type="text/javascript" src="../js/jquery.lazy.min.js"></script>
+    <script type="text/javascript" src="../js/common-20200122.min.js"></script>
+
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVfOgjVSF-1xAmGPrHOUSKRp0pHRt3GFE&libraries=places&callback=initMap"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://crm.zoho.com/crm/javascript/zcga.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://forms.zoho.com/js/zf_gclid.js"
+    ></script>
+  </body>
+</html>

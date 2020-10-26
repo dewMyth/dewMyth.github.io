@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="テイクアウト、事前注文、アプリ制作、オウンドメディア" name="keywords">
+    <title>applova(アップロバ)【飲食店向け】自社テイクアウトアプリ事前注文システム制作・分析・運用サービス</title>
+
+    <link href="https://applovajp.com/home" rel="canonical">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta content="applova(アップロバ)【飲食店向け】自社テイクアウトアプリ事前注文システム制作・分析・運用サービス" property="title">
+    <meta property="description"
+          content="applova(アップロバ)は飲食店・レストラン向けのテイクアウト注文や事前注文アプリ制作・分析・運用システム。
+難しいコーディングの勉強や時間も不要です。既存顧客のリピートを改善するため作成したテイクアウトアプリには、プッシュ通知やスタンプ機能など充実の機能。">
+    <meta content="https://applovajp.com/home" property="og:url">
+    <meta content="Applovajp" property="og:site_name">
+    <meta name="description"
+          content="applova(アップロバ)は飲食店・レストラン向けのテイクアウト注文や事前注文アプリ制作・分析・運用システム。
+難しいコーディングの勉強や時間も不要です。既存顧客のリピートを改善するため作成したテイクアウトアプリには、プッシュ通知やスタンプ機能など充実の機能。">
+    <meta content="applova(アップロバ)【飲食店向け】自社テイクアウトアプリ事前注文システム制作・分析・運用サービス" name="title">
+
+    <!-- Page hiding snippet (recommended)  -->
+    <style>
+        .async-hide {
+            opacity: 0 !important
+        }
+
+        .wrapper.padding-for-video {
+            padding-top: 107px;
+        }
+
+        .wide-logo {
+            border-radius: 0;
+            border: 0;
+            max-width: 80px;
+            width: 100%;
+        }
+
+        @media screen and (max-width: 768px) {
+
+            .navbar-default .navbar-brand {
+                padding: 10px !important;
+            }
+
+            .scroll-2.animated-down-arrow-wrapper {
+                display: none;
+            }
+
+            .wrapper.padding-for-video {
+                padding-top: 50px;
+            }
+        }
+
+        @media screen and (max-width: 350px) {
+            .navbar-header__contact {
+                font-size: 12px;
+            }
+        }
+    </style>
+
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+          w[l] = w[l] || [];
+          w[l].push({
+            "gtm.start": new Date().getTime(),
+            event: "gtm.js",
+          });
+          var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != "dataLayer" ? "&l=" + l : "";
+          j.async = true;
+          j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+          f.parentNode.insertBefore(j, f);
+        })(window, document, "script", "dataLayer", "GTM-TM3J9FF");
+      </script>
+      <!-- End Google Tag Manager -->
+
+
+
+    <!-- <script>
+        (function (a, s, y, n, c, h, i, d, e) {
+            s.className += ' ' + y;
+            h.start = 1 * new Date;
+            h.end = i = function () {
+                s.className = s.className.replace(RegExp(' ?' + y), '')
+            };
+            (a[n] = a[n] || []).hide = h;
+            setTimeout(function () {
+                i();
+                h.end = null
+            }, c);
+            h.timeout = c;
+        })(window, document.documentElement, 'async-hide', 'dataLayer', 4000, {
+            'GTM-TWXGC9C': true
+        });
+    </script> -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121888509-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-121888509-1', {
+            'optimize_id': 'GTM-TWXGC9C'
+        });
+    </script> -->
+
+    <!-- For Facebook -->
+    <meta content="applova(アップロバ)【飲食店向け】自社テイクアウトアプリ事前注文システム制作・分析・運用サービス" property="og:title"/>
+    <meta content="https://applovajp.com/images/applova-logo.png" property="og:image"/>
+    <meta name="og:description"
+          content="applova(アップロバ)は飲食店・レストラン向けのテイクアウト注文や事前注文アプリ制作・分析・運用システム。
+難しいコーディングの勉強や時間も不要です。既存顧客のリピートを改善するため作成したテイクアウトアプリには、プッシュ通知やスタンプ機能など充実の機能。">
+
+    <!-- For Google -->
+    <meta content="" name="keywords"/>
+
+    <meta content="admin" name="author"/>
+    <meta content="Applovajp.com" name="copyright"/>
+    <meta content="Applova" name="application-name"/>
+
+    <!-- For Twitter -->
+    <meta content="summary_large_image" name="twitter:card"/>
+    <meta content="applova(アップロバ)【飲食店向け】自社テイクアウトアプリ事前注文システム制作・分析・運用サービス" name="twitter:title"/>
+    <meta name="twitter:description"
+          content="applova(アップロバ)は飲食店・レストラン向けのテイクアウト注文や事前注文アプリ制作・分析・運用システム。
+難しいコーディングの勉強や時間も不要です。既存顧客のリピートを改善するため作成したテイクアウトアプリには、プッシュ通知やスタンプ機能など充実の機能。"/>
+    <meta content="https://applovajp.com/images/applova-logo.png" name="twitter:image"/>
+    <meta name="twitter:label1" value="Reading time">
+    <meta name="twitter:data1" value="5 minutes">
+
+    <link rel="icon" href="/images/applova-logo-black-fav.png">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
+    <!-- styles -->
+    <link rel="stylesheet" type="text/css" href="/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="/css/new-common-20200409.min.css">
+
+    <!-- <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-102108864-1', 'auto');
+        ga('send', 'pageview');
+    </script> -->
+
+    <!-- Facebook Pixel Code -->
+    <!-- <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window,
+            document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1237984449552745', {
+            em: 'support@applova.io'
+        });
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" alt="Facebook Pixel Code" title="Facebook Pixel Code" style="display:none"
+                   src="https://www.facebook.com/tr?id=1237984449552745&ev=PageView&noscript=1"/></noscript> -->
+    <!-- <script type="text/javascript" src="/js/top-js-20190822.js"></script> -->
+        <!-- End Facebook Pixel Code  -->
+
+    <style>
+        .logo-with-link {
+            padding: 20px;
+            background-color: #fff;
+            position: relative;
+            border: 13px solid #f8f8f891;
+            -webkit-transition: all .2s ease 0s;
+            transition: all .2s ease 0s;
+        }
+
+        .open-hover {
+            position: absolute;
+            display: block;
+            height: 0;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            overflow: hidden;
+            -webkit-transition: all .2s ease 0s;
+            transition: all .2s ease 0s;
+            color: #fff;
+        }
+
+        .logo-with-link:hover {
+            border: 13px solid #f14a5245;
+            -webkit-transition: all .5s ease 0s;
+            transition: all .5s ease 0s;
+        }
+
+        .logo-with-link:hover .open-hover {
+            position: absolute;
+            height: 100%;
+            background-color: #f14a52;
+            z-index: 1;
+            -webkit-transition: all .2s ease 0s;
+            transition: all .2s ease 0s;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff !important;
+            text-decoration: none;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe
+          src="https://www.googletagmanager.com/ns.html?id=GTM-TM3J9FF"
+          height="0"
+          width="0"
+          style="display: none; visibility: hidden"
+        >
+        </iframe>
+      </noscript>
+      <!-- End Google Tag Manager (noscript) -->
+    
+<!-- For Zoho SalesIQ -->
+<script type="text/javascript">
+    var $zoho = $zoho || {};
+    $zoho.salesiq = $zoho.salesiq || {
+        widgetcode: "beaba25195d86f0f3d9ee0c020a01c11fc4c5b0c05b4c227bd9524ce4e9d7e5e",
+        values: {},
+        ready: function () {
+        }
+    };
+    var d = document;
+    s = d.createElement("script");
+    s.type = "text/javascript";
+    s.id = "zsiqscript";
+    s.defer = true;
+    s.src = "https://salesiq.zoho.com/widget";
+    t = d.getElementsByTagName("script")[0];
+    t.parentNode.insertBefore(s, t);
+    d.write("<div id='zsiqwidget'></div>");
+</script>
+
+
+<header applova-include-html="/common-files/parent-page-header.html">
+    <!--Header content goes here-->
+</header>
+
+<div class="wrapper padding-for-video" id="wrapper">
+
+    <div class="temp-msg col-sm-12 container-fluid" style="position: fixed; top: 107px;  z-index: 2;">
+        <div class="alert alert-success alert-dismissible row text-center normal-txt" style="border-radius: 0;">
+            <a aria-label="close" class="close " data-dismiss="alert" href="#"
+               style="line-height: 0.6; font-size:36px;">&times;</a>
+            <!-- <a style="color: #3c763d;" href="https://bit.ly/2xHF8Zu">  <strong>COVID-19（新型コロナウイルス感染症）への取り組みと対応について› </strong></a> -->
+            <a href="/covid-19" style="color: #3c763d;"> <strong>COVID-19（新型コロナウイルス感染症）への取り組みと対応について› </strong></a>
+        </div>
+    </div>
+
+    <div class="banner-section banner-section__home-video">
+        <video autoplay loop muted playsinline>
+            <source src="/videos/applova-order-ahead-banner-video.mp4.mp4" type="video/mp4">
+        </video>
+        <a class="scroll-2 animated-down-arrow-wrapper" style="cursor: pointer;">
+            <div class="animated-down-arrow" id="arrow-down">
+                <i class="fa fa-chevron-down"></i>
+            </div>
+        </a>
+    </div>
+
+    <div class="page-section" data-offset="2" id="section-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="text-center">
+                        <h2>御社専用の事前注文システムを即日スピード公開！<br>ポータルサイトだけに頼らないデジタル対応で"本当に強い"お店に！
+
+                        </h2>
+                    </div>
+                    <div class="row mt-5 text-center">
+
+                        <a class="col-sm-4 clickable-card" href="/products/online-ordering.html">
+                            <img alt="" class="lazy" data-src="/images/home/online-ordering-icon.jpg">
+                            <h4 class="bold-font">自社テイクアウトWEB
+                            </h4>
+                            <p class="mt-4">スマホ、PCに対応した自社サイトを即日公開。<br>
+                                MEO,SNSと連携させて、顧客を獲得しよう！<br>※ドライブスルーにも対応可能
+
+                            </p>
+                            <div class="mt-4">
+                                <p class="link" href="/products/online-ordering.html">サービス詳細へ <i
+                                        class="fa fa-angle-right"></i></p>
+                            </div>
+                        </a>
+
+                        <a class="col-sm-4 clickable-card" href="/products/mobile-order-ahead/">
+                            <img alt="" class="lazy" data-src="/images/home/mobile-ordering-icon.jpg">
+                            <h4 class="bold-font">自社テイクアウトアプリ</h4>
+                            <p class="mt-4">iOSとAndroidの自社アプリが簡単に作成可能。
+                                プッシュ通知やスタンプカードで既存顧客の流出防止に！
+                            </p>
+                            <div class="mt-5">
+                                <p class="link" href="/products/mobile-order-ahead/">サービス詳細へ <i
+                                        class="fa fa-angle-right"></i></p>
+                            </div>
+                        </a>
+
+<!--                        <a class="col-sm-4 clickable-card" href="#">-->
+                            <img alt="" class="lazy" data-src="/images/home/kiosk-ordering-icon.jpg">
+                            <h4 class="bold-font">自動注文端末（coming soon）
+                            </h4>
+                            <p class="mt-4">店頭での無人注文受付と無人決済を実現。<br>
+                                省人化でコア作業に人員を集中させることが可能！
+                            </p>
+                            <div class="mt-5">
+                                <!--                                    <p class="link" href="/kiosk/">もっと読む <i class="fa fa-angle-right"></i></p>   -->
+                            </div>
+<!--                        </a>-->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="page-section gray-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="row">
+                        <div class="col-md-10 col-md-offset-1 text-center">
+                            <h2>お客様の声</h2>
+                        </div>
+                    </div>
+                    <div class="carousel slide carousel-fade mt-5" data-ride="carousel" id="carousel">
+                        <div class="carousel-inner">
+
+                            <div class="item active">
+                                <div class="row">
+                                    <div class="col-md-5 col-sm-4">
+                                        <div class="page-section__quote-image-back">
+                                            <img alt=""
+                                                 class="page-section__quote-shop-back lazy" data-src="/images/case-study/chez-Nous-Team.jpg">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-8">
+                                        <div class="carousel-testimonial-caption" style="height: auto">
+                                            <img alt="" class="page-section__quote-icon lazy"
+                                                 data-src="/images/home/quote-icon.png">
+                                            <p><br/></p>
+                                            <img alt="" class="wide-logo"
+                                                 src="/images/case-study/chez-Nous-logo.png">
+                                            <p class="page-section__quote-text mt-2">
+                                                「コロナ渦の中、テイクアウトやドライブスルー用途での顧客獲得を行うのが急務でした。また、ポータルサイトだけにコロナ渦の中、頼るのは非常に不安だったので、applovaで自社専用のWEBが直ぐに完成し、オンライン対応が出来た事に大満足しています。」
+                                            </p>
+                                            <h5 class="bold-font">Scott Simonson</h5>
+                                            <p>Chez Nousのオーナー
+                                            </p>
+                                            <a class="btn line-btn circle-btn mt-3"
+                                               href="/casestudy/chez-nous.html">体験話を読む <i
+                                                    class="fa fa-angle-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col-md-5 col-sm-4">
+                                        <div class="page-section__quote-image-back">
+                                            <img alt=""
+                                                 class="page-section__quote-shop-back lazy" data-src="/images/home/rollingstone-pizza-back.jpg">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-8">
+                                        <div class="carousel-testimonial-caption" style="height: auto">
+                                            <img alt="" class="page-section__quote-icon lazy"
+                                                 data-src="/images/home/quote-icon.png">
+                                            <img alt="" class="page-section__quote-logo lazy"
+                                                 data-src="/images/pizza-shop/rollingstone-logo.jpg">
+                                            <p class="page-section__quote-text mt-2">
+                                                「applovaで自社アプリを作りました。毎月のサブスク費用は、ピザ3枚ほどでカバーできるんです。以前、他の開発会社での見積もりは高すぎて支払えなかった経験があります。事前注文の機能やプッシュ通知、スタンプカード機能、クーポン機能など同じ機能がついてるのにapplovaは価格が安く、本当に驚きました。」
+                                            </p>
+                                            <h5 class="bold-font" style="margin-top: -30px;">Jim King</h5>
+                                            <p style="margin-top: -10px;">Rolling Stone ピザ店のオーナー
+                                            </p>
+                                            <a class="btn line-btn circle-btn mt-3"
+                                               href="/case-study-rolling-stone-pizza.html">体験話を読む<i
+                                                    class="fa fa-angle-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col-md-5 col-sm-4">
+                                        <div class="page-section__quote-image-back">
+                                            <img alt=""
+                                                 class="page-section__quote-shop-back lazy" data-src="/images/home/sombrero-back.jpg">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-8">
+                                        <div class="carousel-testimonial-caption" style="height: auto">
+                                            <img alt="" class="page-section__quote-icon lazy"
+                                                 data-src="/images/home/quote-icon.png">
+                                            <img alt="" class="page-section__quote-logo lazy"
+                                                 data-src="/images/case-study/sombrero-logo.jpg">
+                                            <p class="page-section__quote-text mt-2">
+                                                「applova導入後、30%も売上が増えました！以前はランチピーク時のトラックの前の長い注文待ちの行列を嫌った顧客もおり、機会損失を繰り返していました。
+                                                applovaで事前注文・事前決済が可能になりオペレーションが劇的に改善された事や、プッシュ通知を行える事が最高です！」
+                                            </p>
+                                            <h5 class="bold-font" style="margin-top: -20px;">Alvaro Chaljub</h5>
+                                            <p>Sombrero フードトラックのオーナー
+                                            </p>
+                                            <a class="btn line-btn circle-btn mt-3"
+                                               href="/case-study-sombrero-food-truck.html">体験話を読む <i
+                                                    class="fa fa-angle-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col-md-5 col-sm-4">
+                                        <div class="page-section__quote-image-back">
+                                            <img alt=""
+                                                 class="page-section__quote-shop-back lazy" data-src="/images/home/blue-island-back.jpg">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-8">
+                                        <div class="carousel-testimonial-caption" style="height: auto">
+                                            <img alt="" class="page-section__quote-icon lazy"
+                                                 data-src="/images/home/quote-icon.png">
+                                            <img alt=""
+                                                 class="page-section__quote-logo lazy" data-src="/images/case-study/blue-island-oyster-co-logo.jpg">
+                                            <p class="page-section__quote-text mt-2">
+                                                「私はレストランを運営しています、applovaの導入で既存顧客に対しての自社アプリを作りました。プッシュ通知やクーポン発行で、リピート率の改善を自分たちでコントロールできるようになったのが大きな魅力ですね。」
+                                            </p>
+                                            <h5 class="bold-font" style="margin-top: -20px;">Todd Rubenstein</h5>
+                                            <p>Blue Island Oyster Co.　マネージャー
+                                            </p>
+                                            <a class="btn line-btn circle-btn mt-3"
+                                               href="/case-study-blue-island-oyster-co.html">体験話を読む <i
+                                                    class="fa fa-angle-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Controls -->
+                        <a class="left carousel-control" data-slide="prev" href="#carousel" role="button">
+                            <i class="fa fa-angle-left fa-3x"></i>
+                        </a>
+                        <a class="right carousel-control" data-slide="next" href="#carousel" role="button">
+                            <i class="fa fa-angle-right fa-3x"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="page-section page-section__slider page-section__tab-text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="page-section__slider-header" style="display: flex; align-items: center;">
+                        <h2 class="bold-font">世界最先端の<br>ハードウェアとの<br>インテグレーション</h2>
+                    </div>
+                    <div id="carousel-2" class="carousel slide" data-ride="carousel">
+                      Indicators
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-2" data-slide-to="0" class="active"><img
+                                    data-src="/images/home/clover-primary-gray-rgb.jpg" class="lazy"
+                                    title="Clover Logo" alt="Clover Logo"></li>
+                            <li data-target="#carousel-2" data-slide-to="1" class="active"><img
+                                    data-src="/images/home/square-logo.jpg" class="lazy" title="Square Logo"
+                                    alt="Square Logo"></li>
+                            <li data-target="#carousel-2" data-slide-to="2" class=""><img
+                                    data-src="/images/home/point-logo.jpg" title="Poynt Logo" class="lazy"
+                                    alt="Poynt Logo"></li>
+                            <li data-target="#carousel-2" data-slide-to="3" class=""><img
+                                    data-src="/images/home/verifone-logo-black.jpg" class="lazy"
+                                    title="Verifone Logo" alt="Verifone Logo"></li>
+                            <li data-target="#carousel-2" data-slide-to="4" class=""><img
+                                    data-src="/images/home/pax-technology-inc-logo.jpg" class="lazy"
+                                    title="PAX Logo" alt="PAX Logo"></li>
+                            <li data-target="#carousel-2" data-slide-to="5" class=""><img
+                                    data-src="/images/home/oracle-micros-logo.jpg" class="lazy"
+                                    title="Oracle Micros Logo" alt="Oracle Micros Logo"></li>
+                        </ol>
+
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <div class="row">
+                                    <div class="col-md-4 col-md-offset-4 text-center">
+                                        <img data-src="/images/home/clover.jpg" class="item__img lazy"
+                                            title="Clover Device" alt="Clover Device">
+                                    </div>
+                                    <div class="col-md-3 col-md-offset-1">
+                                        <div class="page-section__slider-content">
+                                            <p>ApplovaのClover注文アプリを使って行われる全ての注文をビュー及び管理するために、スマートPOSソリューションプロバイダーであるClover POSと統合しました。Clover注文アプリは全てのレストランで利用可能です。</p>
+                                            <a href="/partners/clover.html" class="link">もっと読む <i
+                                                    class="fa fa-angle-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col-md-4 col-md-offset-4 text-center">
+                                        <img data-src="/images/home/square-device.jpg" class="item__img lazy"
+                                            title="Square Device" alt="Square Device">
+                                    </div>
+                                    <div class="col-md-3 col-md-offset-1">
+                                        <div class="page-section__slider-content">
+                                            <p>レストランのプロセスがもっと速く、もっと強く、そして信頼性をより高めるためにApplovaはSquare POSと統合しました。それで、Applovaのデジタル注文プラットフォームを介して行われた注文はすぐにSquare POSに送信されます。</p>
+                                            <a href="https://square.applova.io/" class="link">もっと読む <i
+                                                    class="fa fa-angle-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col-md-4 col-md-offset-4 text-center">
+                                        <img data-src="/images/home/poynt.jpg" class="item__img lazy"
+                                            title="Poynt Device" alt="Poynt Device">
+                                    </div>
+                                    <div class="col-md-3 col-md-offset-1">
+                                        <div class="page-section__slider-content">
+                                            <p>Applovaは最先端のスマートPOSソリューションプロバイダーであるVerifoneと統合して、お客様のレストランに単純で効果的な経験を顧客に与えます。</p>
+                                            <a href="/partners/poynt.html" class="link">もっと読む <i
+                                                    class="fa fa-angle-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col-md-4 col-md-offset-4 text-center">
+                                        <img data-src="/images/home/verifone.jpg" class="item__img lazy"
+                                            title="Verifone Device" alt="Verifone Device">
+                                    </div>
+                                    <div class="col-md-3 col-md-offset-1">
+                                        <div class="page-section__slider-content">
+                                            <p>Applovaは最先端のスマートPOSソリューションプロバイダーであるVerifoneと統合して、お客様のレストランに単純で効果的な経験を顧客に与えます。</p>
+                                            <a href="/partners/verifone.html" class="link">もっと読む <i
+                                                    class="fa fa-angle-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col-md-4 col-md-offset-4 text-center">
+                                        <img data-src="/images/home/pax-device.jpg" class="item__img lazy"
+                                            title="PAX Device" alt="PAX Device">
+                                    </div>
+                                    <div class="col-md-3 col-md-offset-1">
+                                        <div class="page-section__slider-content">
+                                            <p>Applovaでビュー及び注文管理を行うために安全でスタイリッシュで直感的なPOS決済端末ソリューションの大手プロバイダーと統合しました。それで、レストランの販売又はび注文を増やすことが出来ます。
+
+                                            </p>
+                                            <a href="/partners/pax.html" class="link">もっと読む <i
+                                                    class="fa fa-angle-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col-md-4 col-md-offset-4 text-center">
+                                        <img data-src="/images/home/micros-pos.jpg" class="item__img lazy"
+                                            title="Oracle Micros Device" alt="Oracle Micros Device">
+                                    </div>
+                                    <div class="col-md-3 col-md-offset-1">
+                                        <div class="page-section__slider-content">
+                                            <p>ApplovaはOmnivoreのユニバーサルAPIとも統合し、Micros POSを含む、Omnivoreがサポートする全てのPOSソリューションに接続し、リアルタイムアクセスと、送信された注文の読み取りと処理などの機能を備えています。
+                                            </p>
+                                            <a href="/micros-pos.html" class="link">もっと読む <i
+                                                    class="fa fa-angle-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+</div>
+
+
+<div class="page-section gray-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1 text-center">
+                        <h2>"まずは、専門チームに無料相談を！ <br>御社のご状況を伺いながら最適なソリューションをご提案致します。"</h2>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+                        <div class="page-section__card mt-4">
+                            <form
+                                    accept-charset='UTF-8'
+                                    action='https://forms.zohopublic.com/Applova/form/RequestDemo/formperma/wcqQWj8_zbhOdW3_5vmDlwi3l8zTksr_xjZnyv5E1-k/htmlRecords/submit' enctype='multipart/form-data' id='form' method='POST'
+                                    name='form'>
+                                <input name="zf_referrer_name" type="hidden" value="">
+                                <!-- To Track referrals , place the referrer name within the " " in the above hidden input field -->
+                                <input name="zf_redirect_url" type="hidden" value="">
+                                <!-- To redirect to a specific page after record submission , place the respective url within the " " in the above hidden input field -->
+                                <input name="zc_gad" type="hidden" value="">
+                                <!-- If GCLID is enabled in Zoho CRM Integration, click details of AdWords Ads will be pushed to Zoho CRM -->
+                                <div class="row home-page__get-demo-section-1">
+                                    <div class="col-sm-8">
+                                        <input class="form-control" fieldType=1
+                                               id="business-name-input" maxlength="255"
+                                               name="SingleLine1" placeholder="御社の事業名を教えて下さい" type="text" value="">
+                                        <p class="hide mt-0 mb-0" id="get-demo-business-name-alert">Name cannot
+                                            be
+                                            empty!!</p>
+
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <a class="btn primary-btn full-width uppercase bold-font"
+                                           onclick="getDemoHomeSectionClick()">無料相談</a>
+                                    </div>
+                                </div>
+                                <div class="row home-page__get-demo-section-2 hide">
+                                    <div class="col-md-12">
+                                        <input class="form-control" fieldType=1 id="Username"
+                                               maxlength="255" name="SingleLine" oninput="checkGetDemoFormValidity()" placeholder="名前" type="text"
+                                               value=""/>
+                                        <p class="hide" id="name_alert">Name cannot be empty!!</p>
+                                    </div>
+                                    <div class="col-md-6 mt-4">
+                                        <input class="form-control" fieldType=9 id="メールアドレス"
+                                               maxlength="255" name="メールアドレス" oninput="checkGetDemoFormValidity()" placeholder="メールアドレス" type="text"
+                                               value=""/>
+
+                                    </div>
+                                    <div class="col-md-6 mt-4">
+                                        <input class="form-control" compname="PhoneNumber" fieldType=11
+                                               id="international_PhoneNumber_countrycode" isCountryCodeEnabled=false
+                                               name="PhoneNumber_countrycode" oninput="checkGetDemoFormValidity()" phoneFormat="1" placeholder="電話番号"
+                                               type="text"
+                                               value=""/>
+                                    </div>
+                                    <div class="col-md-12 mt-4 hide">
+                                        <input class="form-control" fieldType=1
+                                               id="business-address-input" maxlength="255" name="SingleLine4"
+                                               placeholder="Business Address" type="hidden" value=""/>
+                                    </div>
+                                    <div class="col-md-6 mt-4 hide">
+                                        <input class="form-control" fieldType=1
+                                               id="business-website-input" maxlength="255" name="SingleLine5"
+                                               placeholder="Business Website" type="hidden" value=""/>
+                                    </div>
+                                    <div class="col-md-6 mt-4 hide">
+                                        <input class="form-control" fieldType=1
+                                               id="business-phone-input" maxlength="255" name="SingleLine6" placeholder="Business Phone"
+                                               type="hidden" value=""/>
+                                    </div>
+                                    <div class="col-md-12 mt-4">
+                                        <select class="form-control" name="Dropdown">
+                                            <option selected="true" value="">使用予定の店舗数を選択してください
+                                            </option>
+                                            <option value="1店舗のみ">1店舗のみ</option>
+                                            <option value="2-20店舗">2-20店舗</option>
+                                            <option value="20店舗以上">20店舗以上</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-12 mt-4">
+                                        <button class="btn primary-btn full-width uppercase bold-font"
+                                                disabled="disabled"
+                                                id="form-button" type="submit">提出
+                                        </button>
+                                    </div>
+
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div applova-include-html="/common-files/resource-centre.html" class="footer">
+    <!--resource-centre content goes here-->
+</div>
+<div class="page-section gray-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="row">
+                    <div class="col-xs-12 text-center mb-5">
+                        <h2>メディア掲載</h2>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="page-section__image logo-with-link">
+                            <a class="open-hover" href="http://bit.ly/2SJmTJx">もっと読む</a>
+                            <img alt="QST Logo" class="lazy" data-src="/images/home/logos/qsr-logo.jpg">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="page-section__image logo-with-link">
+                            <a class="open-hover" href="https://bwnews.pr/31Pnyx2">もっと読む</a>
+                            <img alt="Business Wire Logo" class="lazy"
+                                 data-src="/images/home/logos/business-wire-logo.jpg">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="page-section__image logo-with-link">
+                            <a class="open-hover" href="http://bit.ly/3bACcwA">もっと読む</a>
+                            <img alt="Kiosk Marketplace Logo" class="lazy"
+                                 data-src="/images/home/logos/kiosk-marketplace-logo.jpg">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="page-section__image logo-with-link">
+                            <a class="open-hover" href="http://bit.ly/31VKnPJ">もっと読む</a>
+                            <img alt="Greensheet Logo" class="lazy"
+                                 data-src="/images/home/logos/greensheet-logo.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="page-section main-theme-bg-color-fade p-0 overflow-hidden">
+    <div class="container">
+        <div class="row">
+            <!-- <div class="col-md-10 col-md-offset-1">
+                <div class="row height-control">
+                    <div class="col-sm-6 pt-5 pb-5 order-sm-2">
+                        <div class="d-flex flex-flow-row-wrap justify-content-between align-items-start pr-4">
+                            <h3 class="text-white mb-0 w-100"> ライブウェビナー
+                            </h3>
+                            <p class="text-white sub-text mr-5 mr-sm-0 mb-4"> June 18, 2020 | 2PM ET | 11AM PT</p>
+                            <p class="w-100"><a href="./webinar/signup/touch-free-ordering.html"
+                                class="btn primary-btn circle-btn uppercase bg-white main-theme-color bold-font">登録</a></p>
+                        </div>
+                    </div>
+                    <div
+                        class="col-sm-6 pt-5 pb-5 position-relative extent-back-grey d-flex allign-items-center order-sm-1">
+                        <h3 class="bold-font z-2 pl-4 pl-sm-0 mt-0 mb-0">Explore the New Touch-free Guest Experience for Your Restaurant</h3>
+                    </div>
+
+                </div>
+            </div> -->
+        </div>
+    </div>
+</div>
+</div>
+
+<div applova-include-html="/common-files/parent-page-footer.html" class="footer">
+    <!--Footer content goes here-->
+</div>
+
+<script src="/js/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script src="/css/bootstrap-3.3.7-dist/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="/js/float-panel.js" type="text/javascript"></script>
+<script src="/js/jquery.lazy.min.js" type="text/javascript"></script>
+<script src="/js/common-20200122.min.js" type="text/javascript"></script>
+
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVfOgjVSF-1xAmGPrHOUSKRp0pHRt3GFE&libraries=places&callback=initMap">
+</script>
+
+
+<script>
+    $(document).ready(function () {
+        $('.scroll-2').click(function () {
+            $('html, body').animate({
+                scrollTop: $("#section-1").offset().top - 90
+            }, 800);
+        });
+    });
+</script>
+<script src='https://crm.zoho.com/crm/javascript/zcga.js' type="text/javascript"></script>
+<script src='https://forms.zoho.com/js/zf_gclid.js' type="text/javascript"></script>
+
+
+<script>
+    $(document).ready(function () {
+        var trigger = $('.hamburger'),
+            overlay = $('.overlay'),
+            isClosed = false;
+
+        trigger.click(function () {
+            hamburger_cross();
+        });
+
+        function hamburger_cross() {
+
+            if (isClosed == true) {
+                overlay.hide();
+                trigger.removeClass('is-open');
+                trigger.addClass('is-closed');
+                isClosed = false;
+            } else {
+                overlay.show();
+                trigger.removeClass('is-closed');
+                trigger.addClass('is-open');
+                isClosed = true;
+            }
+        }
+
+        $('[data-toggle="offcanvas"]').click(function () {
+            $('#wrapper').toggleClass('toggled');
+        });
+    });
+</script>
+
+
+</body>
+
+</html>

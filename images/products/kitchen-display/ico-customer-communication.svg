@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="115" height="115" viewBox="0 0 115 115">
+  <defs>
+    <clipPath id="clip-ico-customer-communication">
+      <rect width="115" height="115"/>
+    </clipPath>
+  </defs>
+  <g id="ico-customer-communication" clip-path="url(#clip-ico-customer-communication)">
+    <rect width="115" height="115" fill="#fff"/>
+    <g id="Group_47" data-name="Group 47" transform="translate(-176.464 -114.42)">
+      <path id="Path_72" data-name="Path 72" d="M257.21,177.479V134.246a9.837,9.837,0,0,0-9.826-9.826H204.149a1.969,1.969,0,0,0-1.389.575l-15.721,15.721a1.97,1.97,0,0,0-.575,1.391v66.814a9.836,9.836,0,0,0,9.826,9.826h51.095a9.837,9.837,0,0,0,9.826-9.826v-3.929H253.28v3.929a5.9,5.9,0,0,1-5.9,5.9H196.29a5.9,5.9,0,0,1-5.9-5.9v-66l14.571-14.569h42.421a5.9,5.9,0,0,1,5.9,5.9v43.233Z" transform="translate(0 0)" fill="#e72133"/>
+      <path id="Path_73" data-name="Path 73" d="M255.529,153.189l-5.442-5.442a1.965,1.965,0,0,0-2.779,0l-29.931,29.931a1.954,1.954,0,0,0-.521.936H216.8v5.9a1.966,1.966,0,0,0,1.966,1.964h5.9v-.056a1.961,1.961,0,0,0,.936-.521l29.932-29.931A1.965,1.965,0,0,0,255.529,153.189Z" transform="translate(24.689 18.517)" fill="none" stroke="#e72133" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Path_74" data-name="Path 74" d="M229.624,139.588H198.18a1.965,1.965,0,0,0-1.966,1.964v27.513a1.966,1.966,0,0,0,1.1,1.769l13.669,6.682a5.954,5.954,0,0,0,2.948.785,5.61,5.61,0,0,0,2.784-.72l13.773-6.748a1.961,1.961,0,0,0,1.1-1.769V141.552a1.965,1.965,0,0,0-1.964-1.964" transform="translate(7.935 12.345)" fill="#e72133"/>
+      <path id="Path_75" data-name="Path 75" d="M218.553,145.487l-10.4,10.4-4.507-4.507-2.779,2.779,5.9,5.9a1.966,1.966,0,0,0,2.779,0l11.792-11.792Z" transform="translate(11.721 17.146)" fill="#fff"/>
+      <path id="Path_76" data-name="Path 76" d="M210.777,169.318a1.964,1.964,0,0,1-1.964-1.964v-3.931h-3.931v3.931a5.9,5.9,0,0,0,5.9,5.9h11.792v-3.931Z" transform="translate(14.99 31.743)" fill="#e72133"/>
+    </g>
+  </g>
+</svg>

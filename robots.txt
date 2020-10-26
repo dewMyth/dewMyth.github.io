@@ -1,0 +1,5 @@
+User-Agent: *
+Disallow: 
+Disallow: /articles/apps-kiosks-help-restaurants-even-playing-field
+Disallow: /order-ahead-offer
+Disallow: /kiosk-offer

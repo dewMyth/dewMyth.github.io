@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      ピザショップ用のマルチチャネルモバイルストアを作成する| Applova Inc
+    </title>
+    <link
+      href="https://applovajp.com/case-study-rolling-stone-pizza"
+      rel="canonical"
+    />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta
+      content="ピザショップ用のマルチチャネルモバイルストアを作成する| Applova Inc"
+      property="title"
+    />
+    <meta
+      property="description"
+      content="コーディングなしの設定5分で簡単に御社専用ののスマホアプリ（Android / iOS）が完成。カフェの事前注文アプリを利用に。"
+    />
+    <meta
+      content="https://applovajp.com/case-study-rolling-stone-pizza"
+      property="og:url"
+    />
+    <meta property="og:site_name" content="Applova" />
+    <meta
+      name="description"
+      content="コーディングなしの設定5分で簡単に御社専用ののスマホアプリ（Android / iOS）が完成。カフェの事前注文アプリを利用に。"
+    />
+    <meta
+      content="ピザショップ用のマルチチャネルモバイルストアを作成する| Applova Inc"
+      name="title"
+    />
+    <!-- Page hiding snippet (recommended)  -->
+    <style>
+      .async-hide {
+        opacity: 0 !important;
+      }
+    </style>
+
+    <!-- <script>
+      (function (a, s, y, n, c, h, i, d, e) {
+        s.className += " " + y;
+        h.start = 1 * new Date();
+        h.end = i = function () {
+          s.className = s.className.replace(RegExp(" ?" + y), "");
+        };
+        (a[n] = a[n] || []).hide = h;
+        setTimeout(function () {
+          i();
+          h.end = null;
+        }, c);
+        h.timeout = c;
+      })(window, document.documentElement, "async-hide", "dataLayer", 4000, {
+        "GTM-TWXGC9C": true,
+      });
+    </script> -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-121888509-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-121888509-1", {
+        optimize_id: "GTM-TWXGC9C",
+      });
+    </script> -->
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          "gtm.start": new Date().getTime(),
+          event: "gtm.js",
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-TM3J9FF");
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- For Facebook -->
+    <meta
+      content="ピザショップ用のマルチチャネルモバイルストアを作成する| Applova Inc"
+      property="og:title"
+    />
+    <meta
+      content="https://applovajp.com/images/pizza-shop/rollingstone-pizza-1.jpg"
+      property="og:image"
+    />
+    <meta
+      name="og:description"
+      content="コーディングなしの設定5分で簡単に御社専用ののスマホアプリ（Android / iOS）が完成。カフェの事前注文アプリを利用に。"
+    />
+    <!-- For Google -->
+    <meta name="keywords" content="" />
+    <meta name="author" content="admin" />
+    <meta name="copyright" content="Applova.io" />
+    <meta name="application-name" content="Applova" />
+    <!-- For Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      content="ピザショップ用のマルチチャネルモバイルストアを作成する| Applova Inc"
+      name="twitter:title"
+    />
+    <meta
+      name="twitter:description"
+      content="コーディングなしの設定5分で簡単に御社専用ののスマホアプリ（Android / iOS）が完成。カフェの事前注文アプリを利用に。"
+    />
+    <meta
+      content="https://applovajp.com/images/pizza-shop/rollingstone-pizza-1.jpg"
+      name="twitter:image"
+    />
+    <meta name="twitter:label1" value="Reading time" />
+    <meta name="twitter:data1" value="5 minutes" />
+    <link rel="icon" href="/images/applova-logo-black-fav.png" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/css/bootstrap-3.3.7-dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Raleway:300,400,700"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700"
+    />
+    <!-- styles -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/css/new-common-20200409.min.css"
+    />
+
+    <!-- <script>
+      (function (i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "https://www.google-analytics.com/analytics.js",
+        "ga"
+      );
+      ga("create", "UA-102108864-1", "auto");
+      ga("send", "pageview");
+    </script> -->
+
+    <!-- Facebook Pixel Code -->
+
+    <!-- <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "1237984449552745", {
+        em: "support@applova.io",
+      });
+      fbq("track", "PageView");
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        alt="Facebook Pixel Code"
+        title="Facebook Pixel Code"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=1237984449552745&ev=PageView&noscript=1"
+    /></noscript> -->
+    <!-- <script type="text/javascript" src="/js/top-js-20190822.js"></script> -->
+
+    <!-- End Facebook Pixel Code -->
+  </head>
+
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-TM3J9FF"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      >
+      </iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- For Zoho SalesIQ -->
+    <script type="text/javascript">
+      var $zoho = $zoho || {};
+      $zoho.salesiq = $zoho.salesiq || {
+        widgetcode:
+          "beaba25195d86f0f3d9ee0c020a01c11fc4c5b0c05b4c227bd9524ce4e9d7e5e",
+        values: {},
+        ready: function () {},
+      };
+      var d = document;
+      s = d.createElement("script");
+      s.type = "text/javascript";
+      s.id = "zsiqscript";
+      s.defer = true;
+      s.src = "https://salesiq.zoho.com/widget";
+      t = d.getElementsByTagName("script")[0];
+      t.parentNode.insertBefore(s, t);
+      d.write("<div id='zsiqwidget'></div>");
+    </script>
+    <header applova-include-html="/common-files/parent-page-header.html">
+      <!--Header content goes here-->
+    </header>
+    <div class="wrapper">
+      <div class="banner-section banner-section__blog pb-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="image-link-card image-link-card-large bg-white">
+                    <div
+                      class="image-link-card__header"
+                      style="
+                        background-image: url('../images/case-study/applovaRolling-Stone-Pizza-back.png');
+                      "
+                      title="Food-ordering-application"
+                      alt="Food-ordering-application-blog-applova"
+                    ></div>
+                    <div class="image-link-card__body p-5">
+                      <div class="row">
+                        <div class="col-xs-6">
+                          <p class="bold-font uppercase gray-color">
+                            Rolling Stone Pizza Company
+                          </p>
+                        </div>
+                      </div>
+                      <h3 class="bold-font main-theme-color">
+                        Applovaで注文と収益を伸ばしたRolling Stone Pizza
+                      </h3>
+                      <p class="sub-text">
+                        Rolling Stone Pizza Company turned to Applova’s mobile
+                        store building platform to rapidly create, deploy and
+                        manage their mobile app without any coding. Both
+                        regulars and new customers enjoy using the order-ahead
+                        app so that their pizza is hot and ready to eat as soon
+                        as they arrive, increasing satisfaction and loyalty.
+                        Rolling Stone Pizza has increased orders and revenue,
+                        while streamlining order-taking and payment processing
+                        workflows
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page- pb-0">
+        <ul class="document-share-options">
+          <li class="document-share-options-item">
+            <a href=""><i class="fa fa-facebook"></i></a>
+          </li>
+          <li class="document-share-options-item">
+            <a href=""><i class="fa fa-instagram"></i></a>
+          </li>
+          <li class="document-share-options-item">
+            <a href=""><i class="fa fa-twitter"></i></a>
+          </li>
+          <li class="document-share-options-item">
+            <a href=""><i class="fa fa-linkedin"></i></a>
+          </li>
+        </ul>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-md-offset-2">
+              <h4 class="bold-font">
+                applovaモバイルアプリからの売上は、日々増えています。
+              </h4>
+              <p class="sub-text">
+                Customers love using the simple, convenient app because there’s
+                no waiting during pizza ordering and preparation, so they have
+                enough time to enjoy lunchtime with friends and business
+                colleagues. Investing in Applova has been worth every penny. The
+                monthly subscription is only the cost of three pizzas which is
+                easily covered by the number of new orders we generate.”
+              </p>
+              <p class="sub-text gray-color bold-font mb-0 mt-3">Jim King</p>
+              <p class="italic-font gray-color">
+                Rolling Stone ピザ店のオーナー
+              </p>
+              <h4 class="bold-font mt-5">
+                Turn to Applova’s Online Ordering Platform
+              </h4>
+              <p class="sub-text">
+                As a small business lacking time, wherewithal and funds to
+                develop their own app, Rolling Stone Pizza was frustrated and
+                worried about how they could keep their business viable and
+                thriving.
+              </p>
+              <p class="sub-text">
+                Rolling Stone Pizza company was able to rapidly create, deploy
+                and manage their mobile app without any coding. Customers access
+                the custom-branded app by downloading it to smartphones and
+                tablets from the App Store or Google Play.
+              </p>
+              <h4 class="bold-font mt-5">
+                Leverage the social networks with patrons via referrals for new
+                customer acquisition.
+              </h4>
+              <p class="sub-text">
+                The app helps Rolling Stone Pizza’s customers browse menu items,
+                place orders and prepay with credit cards. It also promotes new
+                menu items, special events, personalized and targeted offers and
+                more via push notifications.
+              </p>
+              <h4 class="bold-font mt-5">Applovaと共にビジネスを拡大</h4>
+              <p class="sub-text mb-5">
+                Both regulars and new customers enjoy using the order-ahead app
+                so that their pizza is hot and ready to eat as soon as they
+                arrive, increasing satisfaction and loyalty. Rolling Stone Pizza
+                has increased orders and revenue, while streamlining
+                order-taking and payment processing workflows.
+              </p>
+            </div>
+            <div class="col-md-3">
+              <div class="row">
+                <div class="col-md-12 col-sm-12">
+                  <h4 class="bold-font">Rolling Stone Pizza会社について</h4>
+                  <p class="sub-text">
+                    Rolling Stone Pizza Company has two locations in Northern
+                    California. After almost a decade in business, they started
+                    losing business from regulars in nearby homes and offices to
+                    national chains with proprietary mobile ordering apps.
+                  </p>
+                </div>
+                <div class="col-md-12 col-sm-12 mt-3">
+                  <div class="page-card__color page-card__color--red">
+                    <h2 class="bold-font">
+                      Applovaより搭載されてるRolling Stone
+                      Pizzaアプリのダウンロード
+                    </h2>
+                  </div>
+                  <div class="image-link-card__body">
+                    <div class="page-section__image">
+                      <a
+                        href="https://apps.apple.com/us/app/rolling-stone-pizza-company/id1208021140"
+                      >
+                        <img
+                          data-src="images/case-study/app-store-logo.png"
+                          class="lazy"
+                        />
+                      </a>
+                    </div>
+                    <div class="page-section__image">
+                      <a
+                        href="https://play.google.com/store/apps/details?id=io.apptizer.standalone.pkgBIZ_atw5acfy17e"
+                      >
+                        <img
+                          data-src="images/case-study/google-play.png"
+                          class="lazy"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-10 col-md-offset-1">
+                <hr />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-section white-bg pt-0">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8 col-md-offset-2 text-align-left">
+                <h3 class="bold-font mt-5 main-theme-color">Applovaについて</h3>
+                <p class="sub-text">
+                  Applova is a mobile store building platform that enables small
+                  and medium size businesses (SMBs) to rapidly create, deploy
+                  and manage a custom-branded mobile app without coding.
+                </p>
+                <!-- <h3 class="bold-font mt-5 main-theme-color">Applovaの利点 </h3>
+                        <p class="sub-text">Opens New Sales Channel Increase orders and sales Enhances Shopping
+                            Experience Reduces Labor Shortens Transaction Processing Enhances Customer Loyalty </p>-->
+              </div>
+              <div class="col-md-8 col-md-offset-2">
+                <h3 class="sub-topic bold-font mt-5 main-theme-color">
+                  Applovaの利点
+                </h3>
+                <ul class="page-section__option-list col-md-6">
+                  <li>新しい販売方法の増加</li>
+                  <li>注文と販売の増加</li>
+                  <li>Enhances Shopping Experience</li>
+                </ul>
+                <ul class="page-section__option-list col-md-6">
+                  <li>Reduces Labor</li>
+                  <li>Shortens Transaction Processing</li>
+                  <li>Enhances Customer Loyalty</li>
+                </ul>
+              </div>
+            </div>
+            <div class="row mt-5">
+              <div class="col-md-8 col-md-offset-2">
+                <a
+                  class="link"
+                  href="ebooks/trending-now-self-service-restaurant-kiosks.html"
+                >
+                  <div class="page-card__color page-card__color--red">
+                    <div class="row">
+                      <div class="col-sm-4">
+                        <img
+                          data-src="../images/blog/book-cover.png"
+                          class="lazy mt-3"
+                        />
+                      </div>
+                      <div class="col-sm-8">
+                        <p class="bold-font uppercase">Free Guide</p>
+                        <h2 class="bold-font">
+                          Mobile Ordering Apps Take a Bite out of the
+                          Competition
+                        </h2>
+                        <button class="btn primary-btn--dark uppercase mt-4">
+                          ダウンロード
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-section gray-bg">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-10 col-md-offset-1">
+                <div class="text-center">
+                  <h2>無料デモ <span class="bold-font">を予約する</span></h2>
+                </div>
+                <div class="row mt-4">
+                  <div
+                    class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1"
+                  >
+                    <div class="page-section__card mt-4">
+                      <form
+                        action="https://forms.zohopublic.com/Applova/form/RequestDemo/formperma/wcqQWj8_zbhOdW3_5vmDlwi3l8zTksr_xjZnyv5E1-k/htmlRecords/submit"
+                        name="form"
+                        id="form"
+                        method="POST"
+                        accept-charset="UTF-8"
+                        enctype="multipart/form-data"
+                      >
+                        <input type="hidden" name="zf_referrer_name" value="" />
+                        <!-- To Track referrals , place the referrer name within the " " in the above hidden input field -->
+                        <input type="hidden" name="zf_redirect_url" value="" />
+                        <!-- To redirect to a specific page after record submission , place the respective url within the " " in the above hidden input field -->
+                        <input type="hidden" name="zc_gad" value="" />
+                        <!-- If GCLID is enabled in Zoho CRM Integration, click details of AdWords Ads will be pushed to Zoho CRM -->
+                        <div class="row home-page__get-demo-section-1">
+                          <div class="col-sm-8">
+                            <input
+                              id="business-name-input"
+                              class="form-control"
+                              placeholder="御社の事業名を教えてください"
+                              type="text"
+                              name="SingleLine1"
+                              value=""
+                              fieldType="1"
+                              maxlength="255"
+                            />
+                          </div>
+                          <div class="col-sm-4">
+                            <a
+                              class="btn primary-btn full-width uppercase bold-font"
+                              onclick="getDemoHomeSectionClick()"
+                              >無料お試し</a
+                            >
+                          </div>
+                        </div>
+                        <div class="row home-page__get-demo-section-2 hide">
+                          <div class="col-md-12">
+                            <input
+                              class="form-control"
+                              type="text"
+                              placeholder="名前"
+                              type="text"
+                              name="SingleLine"
+                              value=""
+                              fieldType="1"
+                              maxlength="255"
+                            />
+                          </div>
+                          <div class="col-md-6 mt-4">
+                            <input
+                              class="form-control"
+                              placeholder="メールアドレス"
+                              type="text"
+                              maxlength="255"
+                              name="メールアドレス"
+                              value=""
+                              fieldType="9"
+                            />
+                          </div>
+                          <div class="col-md-6 mt-4">
+                            <input
+                              class="form-control"
+                              placeholder="電話番号"
+                              type="text"
+                              compname="PhoneNumber"
+                              name="PhoneNumber_countrycode"
+                              phoneFormat="1"
+                              isCountryCodeEnabled="false"
+                              maxlength="20"
+                              value=""
+                              fieldType="11"
+                              id="international_PhoneNumber_countrycode"
+                            />
+                          </div>
+                          <div class="col-md-12 mt-4 hide">
+                            <input
+                              class="form-control"
+                              placeholder="Business Address"
+                              id="business-address-input"
+                              type="hidden"
+                              name="SingleLine4"
+                              value=""
+                              fieldType="1"
+                              maxlength="255"
+                            />
+                          </div>
+                          <div class="col-md-6 mt-4 hide">
+                            <input
+                              class="form-control"
+                              placeholder="Business Website"
+                              id="business-website-input"
+                              type="hidden"
+                              name="SingleLine5"
+                              value=""
+                              fieldType="1"
+                              maxlength="255"
+                            />
+                          </div>
+                          <div class="col-md-6 mt-4 hide">
+                            <input
+                              class="form-control"
+                              placeholder="Business Phone"
+                              id="business-phone-input"
+                              type="hidden"
+                              name="SingleLine6"
+                              value=""
+                              fieldType="1"
+                              maxlength="255"
+                            />
+                          </div>
+                          <div class="col-md-12 mt-4">
+                            <select name="Dropdown" class="form-control">
+                              <option selected="true" value="">
+                                使用予定の店舗数を選択してください
+                              </option>
+                              <option value="Single Store">1店舗のみ</option>
+                              <option value="2-20 Stores">2-20店舗</option>
+                              <option value="Over 20 Stores">20店舗以上</option>
+                            </select>
+                          </div>
+                          <div class="col-md-12 mt-4">
+                            <button
+                              class="btn primary-btn full-width uppercase bold-font"
+                              type="submit"
+                            >
+                              提出
+                            </button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-section">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-10 col-md-offset-1">
+                <div class="text-center mb-5">
+                  <h2 class="">リソースセンター</h2>
+                </div>
+                <div class="row height-control">
+                  <div class="col-sm-4 w-sm-100 mb-sm-3">
+                    <div
+                      class="page-section__case-study-card d-flex flex-direction-column h-100 gray-bg"
+                    >
+                      <div
+                        class="page-section__case-study-card-header case-study-Sombrero-card-back"
+                      ></div>
+                      <div class="case-study-card-body">
+                        <h4 class="bold-font text-center">
+                          The Sombrero Food Truck
+                        </h4>
+                        <p class="text-center mt-4">
+                          The Sombrero Food Truck, thrives in popularity with
+                          Applova Order-Ahead App
+                        </p>
+                      </div>
+                      <div class="case-study-card-footer text-center mt-auto">
+                        <a
+                          class="btn line-btn circle-btn bold-font"
+                          href="case-study-sombrero-food-truck.html"
+                          >ストーリーを読む</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4 w-sm-100 mb-sm-3">
+                    <div
+                      class="page-section__case-study-card d-flex flex-direction-column h-100 gray-bg"
+                    >
+                      <div
+                        class="page-section__case-study-card-header case-study-rolling-stone-card-back"
+                      ></div>
+                      <div class="case-study-card-body">
+                        <h4 class="bold-font text-center">
+                          Rolling Stone Pizza Company
+                        </h4>
+                        <p class="text-center mt-4">
+                          The Sombrero Food Truck, thrives in popularity with
+                          Applova Order-Ahead App
+                        </p>
+                      </div>
+                      <div class="case-study-card-footer text-center mt-auto">
+                        <a
+                          class="btn line-btn circle-btn bold-font"
+                          href="case-study-rolling-stone-pizza.html"
+                          >ストーリーを読む</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4 w-sm-100 mb-sm-3">
+                    <div
+                      class="page-section__case-study-card d-flex flex-direction-column h-100 gray-bg"
+                    >
+                      <div
+                        class="page-section__case-study-card-header case-study-blue-island-card-back"
+                      ></div>
+                      <div class="case-study-card-body">
+                        <h4 class="bold-font text-center">
+                          Blue Island Oyster Co
+                        </h4>
+                        <p class="text-center mt-4">
+                          Super Easy Ordering for Blue Island Oyster Co.
+                          Customers with Applova
+                        </p>
+                      </div>
+                      <div class="case-study-card-footer text-center mt-auto">
+                        <a class="btn line-btn circle-btn bold-font" href="#"
+                          >ストーリーを読む</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      applova-include-html="common-files/parent-page-footer.html"
+      class="footer"
+    >
+      <!--Footer content goes here-->
+    </div>
+    <script type="text/javascript" src="/js/jquery-1.11.3.min.js"></script>
+    <script
+      type="text/javascript"
+      src="/css/bootstrap-3.3.7-dist/js/bootstrap.min.js"
+    ></script>
+    <script type="text/javascript" src="/js/float-panel.js"></script>
+    <script type="text/javascript" src="/js/jquery.lazy.min.js"></script>
+    <script type="text/javascript" src="/js/common-20200122.min.js"></script>
+
+    <script
+      type="text/javascript"
+      src="https://crm.zoho.com/crm/javascript/zcga.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://forms.zoho.com/js/zf_gclid.js"
+    ></script>
+  </body>
+</html>
